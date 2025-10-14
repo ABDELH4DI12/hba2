@@ -42,7 +42,6 @@ export function HeroSection() {
               <span className="inline-block text-transparent bg-clip-text bg-gradient-to-r from-[#13a0d3] to-[#0891b2] transform hover:scale-105 transition-transform duration-300">
                 Consulting
               </span>
-              <span className="inline-block text-[#13a0d3] transform hover:scale-105 transition-transform duration-300">.</span>
             </h1>
             
             {/* Enhanced subtitle */}
