@@ -1,4 +1,4 @@
-import { Search, Cog, CheckCircle2 } from "lucide-react"
+import { Search, Cog, Star } from "lucide-react"
 import { motion } from "framer-motion"
 import { VerticalTimeline, VerticalTimelineElement } from 'react-vertical-timeline-component'
 import 'react-vertical-timeline-component/style.min.css'
@@ -85,7 +85,7 @@ export function ApproachSection() {
               background: '#22c55e', 
               color: '#fff'
             }}
-            icon={<CheckCircle2 />}
+            icon={<Star />}
           >
             <h3 className="text-xl font-semibold text-[#002961] mb-3">Concrétisation</h3>
             <p className="text-gray-600 mb-4">
