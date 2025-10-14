@@ -2,7 +2,7 @@ User-agent: *
 Allow: /
 
 # Sitemap
-Sitemap: YOUR_DOMAIN_HERE/sitemap.xml
+Sitemap: http://hbaconseil.com/sitemap.xml
 
 # Crawl-delay for respectful crawling
 Crawl-delay: 1
