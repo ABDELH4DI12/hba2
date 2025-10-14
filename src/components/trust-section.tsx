@@ -18,9 +18,9 @@ export function TrustSection() {
       <div className="container mx-auto px-6 lg:px-12">
         <div className="max-w-6xl mx-auto">
           <div className="mb-20">
-            <p className="text-sm font-medium text-gray-500 mb-4 tracking-wide">Notre Engagement</p>
+            <p className="text-sm font-medium text-gray-500 mb-4 tracking-wide">Notre engagement</p>
             <h2 className="text-4xl md:text-5xl font-light text-[#002961] mb-16">
-              Notre Contrat de Confiance en Conseil
+              Notre contrat de confiance en conseil
             </h2>
           </div>
 

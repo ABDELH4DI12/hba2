@@ -18,7 +18,7 @@ export function Breadcrumb() {
     if (path === "/contact") {
       breadcrumbs.push({ label: "Contact", path: "/contact" })
     } else if (path === "/interventions-medias") {
-      breadcrumbs.push({ label: "Interventions Médias", path: "/interventions-medias" })
+      breadcrumbs.push({ label: "Interventions médias", path: "/interventions-medias" })
     }
     
     return breadcrumbs

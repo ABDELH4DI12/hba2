@@ -3,7 +3,7 @@ import { FileText, TrendingUp, DollarSign, Database, FolderKanban, GraduationCap
 const services = [
   {
     icon: FileText,
-    title: "Refonte de Process",
+    title: "Refonte de process",
     items: [
       "Revue détaillée de processus opérationnels clés",
       "Diagnostic de l'existant et élaboration de cartographies de risques",
@@ -12,7 +12,7 @@ const services = [
   },
   {
     icon: TrendingUp,
-    title: "Accompagnement Stratégique",
+    title: "Accompagnement stratégique",
     items: [
       "Aide au positionnement stratégique d'entreprises",
       "Accompagnement dans la croissance et la maturité",
@@ -22,7 +22,7 @@ const services = [
   },
   {
     icon: DollarSign,
-    title: "Valorisation d'Entreprises",
+    title: "Valorisation d'entreprises",
     items: [
       "Accompagnement dans des audits d'acquisition ou de cession",
       "Analyse normative des performances historiques",
@@ -32,7 +32,7 @@ const services = [
   },
   {
     icon: Database,
-    title: "Structuration Financière",
+    title: "Structuration financière",
     items: [
       "Analyse des éléments constitutifs du BFR",
       "Optimisation de la politique d'approvisionnement",
@@ -42,7 +42,7 @@ const services = [
   },
   {
     icon: FolderKanban,
-    title: "Gestion de Projets",
+    title: "Gestion de projets",
     items: [
       "Pilotage de projets complexes et transverses",
       "Transformation digitale",
@@ -52,7 +52,7 @@ const services = [
   },
   {
     icon: GraduationCap,
-    title: "Formations et Études Sectorielles",
+    title: "Formations et études sectorielles",
     items: [
       "Préparation et animation de formations thématiques",
       "Élaboration d'études et d'analyses de risques sectoriels",
@@ -68,8 +68,8 @@ export function ServicesSection() {
       <div className="container mx-auto px-6 lg:px-12">
         <div className="max-w-6xl mx-auto">
           <div className="mb-20">
-            <p className="text-sm font-medium text-gray-500 mb-4 tracking-wide">Nos Services</p>
-            <h2 className="text-4xl md:text-5xl font-light text-[#002961]">Notre Offre de Valeur</h2>
+            <p className="text-sm font-medium text-gray-500 mb-4 tracking-wide">Nos services</p>
+            <h2 className="text-4xl md:text-5xl font-light text-[#002961]">Notre offre de valeur</h2>
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">

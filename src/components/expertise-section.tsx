@@ -16,8 +16,8 @@ const activities = [
   { text: "Conseil en structuration financière", icon: TrendingUp },
   { text: "Conseil en organisation", icon: Building2 },
   { text: "Conseil en transformation digitale", icon: Cpu },
-  { text: "Conseil en optimisation de BFR / Supply Chain", icon: Package },
-  { text: "Due Diligences financières", icon: FileSearch },
+  { text: "Conseil en optimisation de BFR / supply chain", icon: Package },
+  { text: "Due diligences financières", icon: FileSearch },
   { text: "Valorisations d'entreprises", icon: DollarSign },
   { text: "Aide à la gestion de projets", icon: FolderKanban },
   { text: "Maîtrise d'ouvrage déléguée", icon: Settings },
@@ -30,10 +30,10 @@ export function ExpertiseSection() {
       <div className="container mx-auto px-6 lg:px-12 max-w-7xl">
         <div className="text-center mb-16">
           <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
-            Notre Expertise
+            Notre expertise
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-            Une expertise complète au service de votre croissance, avec des solutions sur mesure adaptées à vos défis spécifiques.
+            Une expertise complète au service de votre croissance, avec des solutions sur-mesure adaptées à vos défis spécifiques.
           </p>
         </div>
 
@@ -57,7 +57,7 @@ export function ExpertiseSection() {
 
           <div className="border-t border-gray-200 pt-16">
             <h3 className="text-2xl font-medium text-[#002961] mb-12">
-              Activités de Conseil
+              Activités de conseil
             </h3>
             <div className="grid md:grid-cols-2 gap-x-16 gap-y-8">
               {activities.map((activity, index) => {

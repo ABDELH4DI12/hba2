@@ -47,7 +47,7 @@ export function HeroSection() {
             {/* Enhanced subtitle */}
             <div className="relative mb-16">
               <p className="text-xl md:text-2xl text-white/90 font-light leading-relaxed tracking-wide">
-                Solutions de Conseil de Confiance
+                Solutions de conseil de confiance
               </p>
               <div className="absolute -bottom-2 left-1/2 transform -translate-x-1/2 w-24 h-0.5 bg-gradient-to-r from-transparent via-[#13a0d3] to-transparent"></div>
             </div>

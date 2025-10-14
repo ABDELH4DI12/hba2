@@ -52,7 +52,7 @@ export function Header() {
                   : "text-gray-900 hover:text-[#13a0d3]"
               }`}
             >
-              Interventions Médias
+              Interventions médias
               <span
                 className={`absolute -bottom-1 left-0 w-full h-0.5 bg-[#13a0d3] transition-transform origin-left ${pathname === "/interventions-medias" ? "scale-x-100" : "scale-x-0 group-hover:scale-x-100"}`}
               />
@@ -91,7 +91,7 @@ export function Header() {
                 onClick={() => setIsMobileMenuOpen(false)}
                 className={`text-sm font-medium ${pathname === "/interventions-medias" ? "text-[#13a0d3]" : "text-gray-900"}`}
               >
-                Interventions Médias
+                Interventions médias
               </Link>
               <Link
                 to="/contact"

@@ -8,8 +8,8 @@ const timelineData = [
     highlights: [
       "Conseil aux entreprises de toutes tailles et de tous secteurs",
       "Accompagnement au développement commercial des entreprises",
-      "Assistance à positionnement stratégique",
-      "Assistance à Maîtrise d'Ouvrage et Gestion de projets",
+      "Assistance au positionnement stratégique",
+      "Assistance à maîtrise d'ouvrage et gestion de projets",
       "Organisation d'évènements thématiques",
     ],
     active: true,
@@ -92,11 +92,11 @@ const achievements = [
     ],
   },
   {
-    category: "Autres Activités",
+    category: "Autres activités",
     icon: Award,
     items: [
       "Intervenant régulier à l'EMLyon Business School (campus de Casablanca)",
-      "Enseignement en Executive MBA et Programme Grande Ecole",
+      "Enseignement en Executive MBA et Programme Grande École",
       "Interventions médias régulières sur Radio Mars depuis 2015",
       "Fondateur de l'école de football KFA O'Darb à Dar Bouazza (2018)",
     ],
@@ -165,7 +165,7 @@ export function ProfileSection() {
           </div>
 
           <div className="bg-white p-12 rounded-lg mb-16">
-            <h3 className="text-2xl font-medium text-[#002961] mb-12">Parcours Professionnel</h3>
+            <h3 className="text-2xl font-medium text-[#002961] mb-12">Parcours professionnel</h3>
 
             <div className="space-y-12">
               {timelineData.map((item, index) => (
@@ -189,7 +189,7 @@ export function ProfileSection() {
           </div>
 
           <div className="bg-white p-12 rounded-lg">
-            <h3 className="text-2xl font-medium text-[#002961] mb-12">Principales Réalisations</h3>
+            <h3 className="text-2xl font-medium text-[#002961] mb-12">Principales réalisations</h3>
 
             <div className="grid md:grid-cols-2 gap-12">
               {achievements.map((achievement, index) => (

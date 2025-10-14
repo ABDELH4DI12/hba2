@@ -62,7 +62,7 @@ export default function InterventionsMediasPage() {
         <div className="container mx-auto px-6 lg:px-12">
           <div className="max-w-6xl mx-auto">
             <div className="mb-20">
-              <h1 className="text-4xl md:text-5xl font-light text-[#002961] mb-16">Interventions Médias</h1>
+              <h1 className="text-4xl md:text-5xl font-light text-[#002961] mb-16">Interventions médias</h1>
               <p className="text-xl text-gray-600 leading-relaxed max-w-3xl">
                 Découvrez les interventions de Hicham Bensaid Alaoui dans les médias, 
                 où il partage son expertise sur les enjeux économiques et financiers.

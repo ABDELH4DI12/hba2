@@ -6,8 +6,8 @@ export function ApproachSection() {
       <div className="container mx-auto px-6 lg:px-12">
         <div className="max-w-6xl mx-auto">
           <div className="mb-20">
-            <p className="text-sm font-medium text-gray-500 mb-4 tracking-wide">Notre Méthodologie</p>
-            <h2 className="text-4xl md:text-5xl font-light text-[#002961]">Notre Approche Macro</h2>
+            <p className="text-sm font-medium text-gray-500 mb-4 tracking-wide">Notre méthodologie</p>
+            <h2 className="text-4xl md:text-5xl font-light text-[#002961]">Notre approche macro</h2>
           </div>
 
           <div className="grid md:grid-cols-3 gap-12">

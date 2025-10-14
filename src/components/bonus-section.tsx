@@ -6,9 +6,9 @@ export function BonusSection() {
       <div className="container mx-auto px-6 lg:px-12">
         <div className="max-w-6xl mx-auto">
           <div className="mb-20">
-            <p className="text-sm font-medium text-gray-500 mb-4 tracking-wide">Notre Bonus</p>
+            <p className="text-sm font-medium text-gray-500 mb-4 tracking-wide">Notre bonus</p>
             <h2 className="text-4xl md:text-5xl font-light text-[#002961]">
-              Restitution Structurée aux Équipes et Impact Externe
+              Restitution structurée aux équipes et impact externe
             </h2>
           </div>
 
