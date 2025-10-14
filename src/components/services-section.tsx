@@ -1,4 +1,5 @@
 import { FileText, TrendingUp, DollarSign, Database, FolderKanban, GraduationCap } from "lucide-react"
+import { motion } from "framer-motion"
 
 const services = [
   {
@@ -67,16 +68,40 @@ export function ServicesSection() {
     <section id="services" className="py-32 bg-white">
       <div className="container mx-auto px-6 lg:px-12">
         <div className="max-w-6xl mx-auto">
-          <div className="mb-20">
+          <motion.div 
+            className="mb-20"
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+          >
             <p className="text-sm font-medium text-gray-500 mb-4 tracking-wide">Nos services</p>
             <h2 className="text-4xl md:text-5xl font-light text-[#002961]">Notre offre de valeur</h2>
-          </div>
+          </motion.div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <motion.div 
+            className="grid md:grid-cols-2 lg:grid-cols-3 gap-8"
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            transition={{ duration: 0.8, delay: 0.2 }}
+            viewport={{ once: true }}
+          >
             {services.map((service, index) => {
               const Icon = service.icon
               return (
-                <div key={index} className="bg-gray-50 p-8 rounded-lg hover:bg-white hover:shadow-lg transition-all">
+                <motion.div 
+                  key={index} 
+                  className="bg-gray-50 p-8 rounded-lg"
+                  initial={{ opacity: 0, y: 30 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6, delay: index * 0.1 }}
+                  whileHover={{ 
+                    y: -5, 
+                    backgroundColor: "#ffffff", 
+                    boxShadow: "0 10px 25px rgba(0, 0, 0, 0.1)" 
+                  }}
+                  viewport={{ once: true }}
+                >
                   <div className="w-12 h-12 rounded-full bg-[#13a0d3]/10 flex items-center justify-center mb-6">
                     <Icon className="w-6 h-6 text-[#13a0d3]" />
                   </div>
@@ -88,10 +113,10 @@ export function ServicesSection() {
                       </li>
                     ))}
                   </ul>
-                </div>
+                </motion.div>
               )
             })}
-          </div>
+          </motion.div>
         </div>
       </div>
     </section>

@@ -1,4 +1,5 @@
 import { Award, GraduationCap, TrendingUp } from "lucide-react"
+import { motion } from "framer-motion"
 
 const timelineData = [
   {
@@ -108,10 +109,22 @@ export function ProfileSection() {
     <section id="qui-nous-sommes" className="py-32 bg-white">
       <div className="container mx-auto px-6 lg:px-12">
         <div className="max-w-6xl mx-auto">
-          <div className="mb-20">
+          <motion.div 
+            className="mb-20"
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+          >
             <div className="flex flex-col md:flex-row items-center md:items-start gap-8 mb-8">
               {/* Profile Image */}
-              <div className="flex-shrink-0">
+              <motion.div 
+                className="flex-shrink-0"
+                initial={{ opacity: 0, scale: 0.8 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 0.6, delay: 0.2 }}
+                viewport={{ once: true }}
+              >
                 <div className="relative">
                   <img 
                     src="/assets/hicham.png" 
@@ -120,18 +133,34 @@ export function ProfileSection() {
                   />
                   <div className="absolute inset-0 rounded-3xl bg-gradient-to-tr from-[#13a0d3]/20 to-transparent"></div>
                 </div>
-              </div>
+              </motion.div>
               
               {/* Profile Info */}
-              <div className="text-center md:text-left">
+              <motion.div 
+                className="text-center md:text-left"
+                initial={{ opacity: 0, x: 30 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.6, delay: 0.4 }}
+                viewport={{ once: true }}
+              >
                 <p className="text-sm font-medium text-gray-500 mb-4 tracking-wide">Fondateur & Gérant</p>
                 <h2 className="text-4xl md:text-5xl font-light text-[#002961] mb-4">Hicham Bensaid Alaoui</h2>
-              </div>
+              </motion.div>
             </div>
-          </div>
+          </motion.div>
 
-          <div className="grid md:grid-cols-3 gap-8 mb-24">
-            <div className="bg-white p-8 rounded-lg">
+          <motion.div 
+            className="grid md:grid-cols-3 gap-8 mb-24"
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.2 }}
+            viewport={{ once: true }}
+          >
+            <motion.div 
+              className="bg-white p-8 rounded-lg"
+              whileHover={{ y: -5, boxShadow: "0 10px 25px rgba(0, 0, 0, 0.1)" }}
+              transition={{ duration: 0.3 }}
+            >
               <div className="w-12 h-12 rounded-full bg-[#13a0d3]/10 flex items-center justify-center mb-6">
                 <GraduationCap className="w-6 h-6 text-[#13a0d3]" />
               </div>
@@ -140,9 +169,13 @@ export function ProfileSection() {
                 Diplômé d'Audencia Nantes School of Management (2005) et titulaire du Diplôme National d'Expertise
                 Comptable en France (2018)
               </p>
-            </div>
+            </motion.div>
 
-            <div className="bg-white p-8 rounded-lg">
+            <motion.div 
+              className="bg-white p-8 rounded-lg"
+              whileHover={{ y: -5, boxShadow: "0 10px 25px rgba(0, 0, 0, 0.1)" }}
+              transition={{ duration: 0.3 }}
+            >
               <div className="w-12 h-12 rounded-full bg-[#13a0d3]/10 flex items-center justify-center mb-6">
                 <TrendingUp className="w-6 h-6 text-[#13a0d3]" />
               </div>
@@ -150,9 +183,13 @@ export function ProfileSection() {
               <p className="text-sm text-gray-600 leading-relaxed">
                 Plus de 18 ans d'expérience en audit, conseil et direction générale dans des entreprises de premier plan
               </p>
-            </div>
+            </motion.div>
 
-            <div className="bg-white p-8 rounded-lg">
+            <motion.div 
+              className="bg-white p-8 rounded-lg"
+              whileHover={{ y: -5, boxShadow: "0 10px 25px rgba(0, 0, 0, 0.1)" }}
+              transition={{ duration: 0.3 }}
+            >
               <div className="w-12 h-12 rounded-full bg-[#13a0d3]/10 flex items-center justify-center mb-6">
                 <Award className="w-6 h-6 text-[#13a0d3]" />
               </div>
@@ -160,53 +197,98 @@ export function ProfileSection() {
               <p className="text-sm text-gray-600 leading-relaxed">
                 Lauréat Choiseul Africa 100 (2022) - Top 100 des dirigeants africains de moins de 40 ans
               </p>
-            </div>
+            </motion.div>
+          </motion.div>
+
+          <div className="mb-16">
+            <motion.h3 
+              className="text-3xl md:text-4xl font-light text-[#002961] mb-8"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+            >
+              Parcours professionnel
+            </motion.h3>
+            <motion.div 
+              className="bg-white p-12 rounded-lg mb-16"
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.2 }}
+              viewport={{ once: true }}
+            >
+
+              <div className="space-y-12">
+                {timelineData.map((item, index) => (
+                  <motion.div 
+                    key={index} 
+                    className="border-l-2 border-[#13a0d3] pl-8 relative"
+                    initial={{ opacity: 0, x: -20 }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    transition={{ duration: 0.6, delay: index * 0.1 }}
+                    viewport={{ once: true }}
+                  >
+                    <div
+                      className={`absolute -left-2 top-0 w-4 h-4 rounded-full ${item.active ? "bg-[#13a0d3]" : "bg-gray-300"}`}
+                    />
+                    <div className="text-sm text-gray-500 mb-2">{item.period}</div>
+                    <h4 className="text-xl font-medium text-[#002961] mb-1">{item.title}</h4>
+                    <p className="text-gray-600 mb-4">{item.company}</p>
+                    <ul className="space-y-2">
+                      {item.highlights.map((highlight, idx) => (
+                        <li key={idx} className="text-sm text-gray-600 leading-relaxed">
+                          • {highlight}
+                        </li>
+                      ))}
+                    </ul>
+                  </motion.div>
+                ))}
+              </div>
+            </motion.div>
           </div>
 
           <div className="mb-16">
-            <h2 className="text-3xl md:text-4xl font-light text-[#002961] mb-12">Parcours professionnel</h2>
-            <div className="bg-white p-12 rounded-lg">
+            <motion.div 
+              className="mb-12"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+            >
+              <p className="text-sm font-medium text-gray-500 mb-4 tracking-wide">Nos succès</p>
+              <h3 className="text-3xl md:text-4xl font-light text-[#002961]">Principales Réalisations</h3>
+            </motion.div>
 
-            <div className="space-y-12">
-              {timelineData.map((item, index) => (
-                <div key={index} className="border-l-2 border-[#13a0d3] pl-8 relative">
-                  <div
-                    className={`absolute -left-2 top-0 w-4 h-4 rounded-full ${item.active ? "bg-[#13a0d3]" : "bg-gray-300"}`}
-                  />
-                  <div className="text-sm text-gray-500 mb-2">{item.period}</div>
-                  <h4 className="text-xl font-medium text-[#002961] mb-1">{item.title}</h4>
-                  <p className="text-gray-600 mb-4">{item.company}</p>
-                  <ul className="space-y-2">
-                    {item.highlights.map((highlight, idx) => (
-                      <li key={idx} className="text-sm text-gray-600 leading-relaxed">
-                        • {highlight}
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              ))}
-            </div>
-            </div>
-          </div>
-
-          <div className="mb-16">
-            <h2 className="text-3xl md:text-4xl font-light text-[#002961] mb-12">Principales Réalisations</h2>
-            <div className="bg-white p-12 rounded-lg">
-
-            <div className="grid md:grid-cols-2 gap-12">
-              {achievements.map((achievement, index) => (
-                <div key={index}>
-                  <h4 className="font-medium text-lg text-[#002961] mb-4">{achievement.category}</h4>
-                  <ul className="space-y-3">
-                    {achievement.items.map((item, idx) => (
-                      <li key={idx} className="text-sm text-gray-600 leading-relaxed">
-                        • {item}
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              ))}
-            </div>
+            <div className="grid md:grid-cols-2 gap-8">
+              {achievements.map((achievement, index) => {
+                const Icon = achievement.icon
+                return (
+                  <motion.div 
+                    key={index}
+                    className="bg-white p-8 rounded-lg border border-gray-100 hover:shadow-lg transition-all duration-300"
+                    initial={{ opacity: 0, y: 30 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.6, delay: index * 0.1 }}
+                    whileHover={{ y: -5 }}
+                    viewport={{ once: true }}
+                  >
+                    <div className="flex items-center gap-4 mb-6">
+                      <div className="w-12 h-12 rounded-full bg-[#13a0d3]/10 flex items-center justify-center">
+                        <Icon className="w-6 h-6 text-[#13a0d3]" />
+                      </div>
+                      <h4 className="font-semibold text-xl text-[#002961]">{achievement.category}</h4>
+                    </div>
+                    <ul className="space-y-4">
+                      {achievement.items.map((item, idx) => (
+                        <li key={idx} className="flex items-start gap-3 text-sm text-gray-600 leading-relaxed">
+                          <div className="w-2 h-2 rounded-full bg-[#13a0d3] mt-2 flex-shrink-0"></div>
+                          <span>{item}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </motion.div>
+                )
+              })}
             </div>
           </div>
         </div>

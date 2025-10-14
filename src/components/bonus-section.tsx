@@ -1,48 +1,56 @@
 import { Presentation, Calendar, Megaphone } from "lucide-react"
+import { motion } from "framer-motion"
 
 export function BonusSection() {
+  const bonuses = [
+    { icon: Presentation, title: "Organisation d'ateliers de restitution", description: "Synthèse des principaux messages, de manière structurée, ludique et impactante" },
+    { icon: Calendar, title: "Structuration en évènement technique", description: "Sélection de thèmes, de panélistes, de modérateurs, de lieux" },
+    { icon: Megaphone, title: "Impact interne & externe", description: "Mise en avant de messages stratégiques clairs et promotion de votre marque" },
+  ]
+
   return (
     <section className="py-32 bg-gray-50">
       <div className="container mx-auto px-6 lg:px-12">
         <div className="max-w-6xl mx-auto">
-          <div className="mb-20">
-            <p className="text-sm font-medium text-gray-500 mb-4 tracking-wide">Notre bonus</p>
-            <h2 className="text-4xl md:text-5xl font-light text-[#002961]">
-              Restitution structurée aux équipes et impact externe
-            </h2>
-          </div>
+          <motion.div 
+            className="mb-20"
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+          >
+            <p className="text-sm font-medium text-gray-500 mb-4 tracking-wide">Nos plus</p>
+            <h2 className="text-4xl md:text-5xl font-light text-[#002961]">Nos bonus</h2>
+          </motion.div>
 
-          <div className="grid md:grid-cols-3 gap-8 mb-16">
-            <div className="bg-white p-8 rounded-lg">
-              <div className="w-12 h-12 rounded-full bg-[#13a0d3]/10 flex items-center justify-center mb-6">
-                <Presentation className="w-6 h-6 text-[#13a0d3]" />
-              </div>
-              <h3 className="text-lg font-medium mb-4 text-[#002961]">Organisation d'ateliers de restitution</h3>
-              <p className="text-sm text-gray-600 leading-relaxed">
-                Synthèse des principaux messages, de manière structurée, ludique et impactante
-              </p>
-            </div>
-
-            <div className="bg-white p-8 rounded-lg">
-              <div className="w-12 h-12 rounded-full bg-[#13a0d3]/10 flex items-center justify-center mb-6">
-                <Calendar className="w-6 h-6 text-[#13a0d3]" />
-              </div>
-              <h3 className="text-lg font-medium mb-4 text-[#002961]">Structuration en évènement technique</h3>
-              <p className="text-sm text-gray-600 leading-relaxed">
-                Sélection de thèmes, de panélistes, de modérateurs, de lieux
-              </p>
-            </div>
-
-            <div className="bg-white p-8 rounded-lg">
-              <div className="w-12 h-12 rounded-full bg-[#13a0d3]/10 flex items-center justify-center mb-6">
-                <Megaphone className="w-6 h-6 text-[#13a0d3]" />
-              </div>
-              <h3 className="text-lg font-medium mb-4 text-[#002961]">Impact interne & externe</h3>
-              <p className="text-sm text-gray-600 leading-relaxed">
-                Mise en avant de messages stratégiques clairs et promotion de votre marque
-              </p>
-            </div>
-          </div>
+          <motion.div 
+            className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-4"
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            transition={{ duration: 0.8, delay: 0.2 }}
+            viewport={{ once: true }}
+          >
+            {bonuses.map((bonus, index) => {
+              const Icon = bonus.icon
+              return (
+                <motion.div 
+                  key={index} 
+                  className="bg-white p-8 rounded-lg text-center h-full flex flex-col"
+                  initial={{ opacity: 0, scale: 0.9 }}
+                  whileInView={{ opacity: 1, scale: 1 }}
+                  transition={{ duration: 0.6, delay: index * 0.1 }}
+                  whileHover={{ y: -5, scale: 1.05, boxShadow: "0 10px 25px rgba(0, 0, 0, 0.1)" }}
+                  viewport={{ once: true }}
+                >
+                  <div className="w-12 h-12 rounded-full bg-[#13a0d3]/10 flex items-center justify-center mb-6">
+                    <Icon className="w-6 h-6 text-[#13a0d3]" />
+                  </div>
+                  <h3 className="text-lg font-medium mb-4 text-[#002961]">{bonus.title}</h3>
+                  <p className="text-sm text-gray-600 leading-relaxed flex-grow">{bonus.description}</p>
+                </motion.div>
+              )
+            })}
+          </motion.div>
 
           <div className="bg-white p-12 rounded-lg">
             <div className="grid md:grid-cols-2 gap-8 mb-8">

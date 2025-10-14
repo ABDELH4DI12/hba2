@@ -7,6 +7,13 @@ export function Header() {
   const location = useLocation()
   const pathname = location.pathname
 
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    })
+  }
+
   return (
     <>
       {/* Skip Navigation Link for Accessibility */}
@@ -22,11 +29,11 @@ export function Header() {
       >
       <div className="container mx-auto px-6 lg:px-12">
         <div className="flex items-center justify-between h-16">
-          <Link to="/" className="group">
+          <Link to="/" className="group" onClick={scrollToTop}>
             <img 
               src="/assets/hbaLogo.png" 
               alt="HBA Logo" 
-              className="h-8 w-auto transition-all duration-300 brightness-0 saturate-100 hue-rotate-[210deg] brightness-[0.3] contrast-[2]"
+              className="h-8 w-auto transition-all duration-300 brightness-0 saturate-100 hue-rotate-[210deg] brightness-[0.3] contrast-[2] cursor-pointer"
             />
           </Link>
 
