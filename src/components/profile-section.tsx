@@ -106,7 +106,16 @@ const achievements = [
 export function ProfileSection() {
   return (
     <section id="qui-nous-sommes" className="py-32 bg-white">
-      <div className="container mx-auto px-6 lg:px-12">
+      <div className="container mx-auto px-6 lg:px-12 max-w-7xl">
+        <div className="text-center mb-16">
+          <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
+            Qui nous sommes
+          </h2>
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
+            Découvrez l'expertise et l'expérience qui font de HBA Consulting votre partenaire de confiance pour la croissance de votre entreprise.
+          </p>
+        </div>
+        
         <div className="max-w-6xl mx-auto">
           <div className="mb-20">
             <div className="flex flex-col md:flex-row items-center md:items-start gap-8 mb-8">
@@ -124,55 +133,51 @@ export function ProfileSection() {
               
               {/* Profile Info */}
               <div className="text-center md:text-left">
-                <p className="text-sm font-medium text-gray-500 mb-4 tracking-wide">Fondateur & Gérant</p>
-                <h2 className="text-4xl md:text-5xl font-light text-[#002961] mb-4">Hicham Bensaid Alaoui</h2>
-                <p className="text-lg text-gray-600">43 ans, marié, 2 enfants</p>
+                <p className="text-lg text-gray-600 mb-2">Fondateur & Gérant</p>
+                <h3 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
+                  Hicham Bensaid Alaoui
+                </h3>
+                <p className="text-lg text-gray-700 leading-relaxed max-w-2xl">
+                  Expert en stratégie d'entreprise avec plus de 15 ans d'expérience dans le conseil et l'accompagnement des entreprises vers l'excellence opérationnelle.
+                </p>
               </div>
-              <motion.div 
-                className="bg-white p-8 rounded-lg shadow-lg"
-                whileHover={{ y: -5, boxShadow: "0 20px 25px -5px rgba(0, 0, 0, 0.1)" }}
-                transition={{ duration: 0.2 }}
-              >
-                <div className="w-12 h-12 rounded-full bg-[#13a0d3]/10 flex items-center justify-center mb-6">
-                  <GraduationCap className="w-6 h-6 text-[#13a0d3]" />
-                </div>
-                <h3 className="text-lg font-medium text-[#002961] mb-3">Formation</h3>
-                <p className="text-sm text-gray-600 leading-relaxed">
-                  Diplômé d'Audencia Nantes School of Management (2005) et titulaire du Diplôme National d'Expertise
-                  Comptable en France (2018)
-                </p>
-              </motion.div>
+            </div>
+          </div>
 
-              <motion.div 
-                className="bg-white p-8 rounded-lg shadow-lg"
-                whileHover={{ y: -5, boxShadow: "0 20px 25px -5px rgba(0, 0, 0, 0.1)" }}
-                transition={{ duration: 0.2 }}
-              >
-                <div className="w-12 h-12 rounded-full bg-[#13a0d3]/10 flex items-center justify-center mb-6">
-                  <TrendingUp className="w-6 h-6 text-[#13a0d3]" />
-                </div>
-                <h3 className="text-lg font-medium text-[#002961] mb-3">Expérience</h3>
-                <p className="text-sm text-gray-600 leading-relaxed">
-                  Plus de 18 ans d'expérience en audit, conseil et direction générale dans des entreprises de premier plan
-                </p>
-              </motion.div>
+          <div className="grid md:grid-cols-3 gap-8 mb-24">
+            <div className="bg-white p-8 rounded-lg shadow-lg">
+              <div className="w-12 h-12 rounded-full bg-[#13a0d3]/10 flex items-center justify-center mb-6">
+                <GraduationCap className="w-6 h-6 text-[#13a0d3]" />
+              </div>
+              <h3 className="text-lg font-medium text-[#002961] mb-3">Formation</h3>
+              <p className="text-sm text-gray-600 leading-relaxed">
+                Diplômé d'Audencia Nantes School of Management (2005) et titulaire du Diplôme National d'Expertise
+                Comptable en France (2018)
+              </p>
+            </div>
 
-              <motion.div 
-                className="bg-white p-8 rounded-lg shadow-lg"
-                whileHover={{ y: -5, boxShadow: "0 20px 25px -5px rgba(0, 0, 0, 0.1)" }}
-                transition={{ duration: 0.2 }}
-              >
-                <div className="w-12 h-12 rounded-full bg-[#13a0d3]/10 flex items-center justify-center mb-6">
-                  <Award className="w-6 h-6 text-[#13a0d3]" />
-                </div>
-                <h3 className="text-lg font-medium text-[#002961] mb-3">Reconnaissance</h3>
-                <p className="text-sm text-gray-600 leading-relaxed">
-                  Lauréat Choiseul Africa 100 (2022) - Top 100 des dirigeants africains de moins de 40 ans
-                </p>
-              </motion.div>
-            </motion.div>
+            <div className="bg-white p-8 rounded-lg shadow-lg">
+              <div className="w-12 h-12 rounded-full bg-[#13a0d3]/10 flex items-center justify-center mb-6">
+                <TrendingUp className="w-6 h-6 text-[#13a0d3]" />
+              </div>
+              <h3 className="text-lg font-medium text-[#002961] mb-3">Expérience</h3>
+              <p className="text-sm text-gray-600 leading-relaxed">
+                Plus de 18 ans d'expérience en audit, conseil et direction générale dans des entreprises de premier plan
+              </p>
+            </div>
 
-          <div className="bg-white p-12 rounded-lg mb-16">
+            <div className="bg-white p-8 rounded-lg shadow-lg">
+              <div className="w-12 h-12 rounded-full bg-[#13a0d3]/10 flex items-center justify-center mb-6">
+                <Award className="w-6 h-6 text-[#13a0d3]" />
+              </div>
+              <h3 className="text-lg font-medium text-[#002961] mb-3">Reconnaissance</h3>
+              <p className="text-sm text-gray-600 leading-relaxed">
+                Lauréat Choiseul Africa 100 (2022) - Top 100 des dirigeants africains de moins de 40 ans
+              </p>
+            </div>
+          </div>
+
+          <div className="bg-white p-12 rounded-lg shadow-lg mb-16">
             <h3 className="text-2xl font-medium text-[#002961] mb-12">Parcours Professionnel</h3>
 
             <div className="space-y-12">
@@ -196,7 +201,7 @@ export function ProfileSection() {
             </div>
           </div>
 
-          <div className="bg-white p-12 rounded-lg">
+          <div className="bg-white p-12 rounded-lg shadow-lg">
             <h3 className="text-2xl font-medium text-[#002961] mb-12">Principales Réalisations</h3>
 
             <div className="grid md:grid-cols-2 gap-12">
