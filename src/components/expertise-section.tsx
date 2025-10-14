@@ -43,69 +43,140 @@ export function ExpertiseSection() {
           </p>
         </motion.div>
 
-        <div className="max-w-6xl mx-auto">
-          <motion.div 
-            className="mb-20"
-            initial={{ opacity: 0, y: 50 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-          >
-            <p className="text-sm font-medium text-gray-500 mb-4 tracking-wide">Nos domaines</p>
-            <h2 className="text-4xl md:text-5xl font-light text-[#002961]">Nos expertises</h2>
-          </motion.div>
-          <div className="grid md:grid-cols-2 gap-16 mb-20">
-            <div>
-              <div className="text-7xl font-light text-[#002961] mb-6">1</div>
-              <h3 className="text-xl font-medium text-[#002961] mb-4">Des expertises variées</h3>
-              <p className="text-gray-600 leading-relaxed">
-                Un accompagnement complet dans tous les domaines stratégiques de votre entreprise
-              </p>
-            </div>
-            <div>
-              <div className="text-7xl font-light text-[#002961] mb-6">2</div>
-              <h3 className="text-xl font-medium text-[#002961] mb-4">Un engagement d'excellence</h3>
-              <p className="text-gray-600 leading-relaxed">
-                Une approche rigoureuse et personnalisée pour garantir votre réussite
-              </p>
+        {/* Full-width Rectangle with Image and Content */}
+        <motion.div 
+          className="grid md:grid-cols-2 rounded-2xl overflow-hidden shadow-xl mb-20"
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.2 }}
+          viewport={{ once: true }}
+        >
+          {/* Left Side - Image with Overlay */}
+          <div className="relative h-80 md:h-96">
+            <img 
+              src="/assets/expertises.jpeg" 
+              alt="Expertise HBA Consulting" 
+              className="w-full h-full object-cover"
+            />
+            <div className="absolute inset-0 bg-gradient-to-r from-[#002961]/80 via-[#002961]/60 to-[#13a0d3]/40"></div>
+            <div className="absolute inset-0 flex items-center justify-center">
+              <motion.div 
+                className="text-center text-white"
+                initial={{ opacity: 0, scale: 0.8 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 0.6, delay: 0.4 }}
+                viewport={{ once: true }}
+              >
+                <div className="w-16 h-16 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center mx-auto mb-4">
+                  <Target className="w-8 h-8 text-white" />
+                </div>
+                <h3 className="text-2xl font-semibold">Excellence</h3>
+                <p className="text-sm opacity-90">& Expertise</p>
+              </motion.div>
             </div>
           </div>
 
-          <div className="border-t border-gray-200 pt-16">
-            <h3 className="text-2xl font-medium text-[#002961] mb-12">
-              Activités de Conseil
-            </h3>
-            <motion.div 
-              className="grid md:grid-cols-2 lg:grid-cols-3 gap-8"
-              initial={{ opacity: 0 }}
-              whileInView={{ opacity: 1 }}
-              transition={{ duration: 0.8, delay: 0.2 }}
+          {/* Right Side - Content */}
+          <div className="bg-white p-8 md:p-12 flex flex-col justify-center">
+            <motion.div
+              initial={{ opacity: 0, x: 30 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.6, delay: 0.3 }}
               viewport={{ once: true }}
             >
+              <div className="mb-8">
+                <div className="flex items-center gap-3 mb-4">
+                  <div className="w-8 h-8 bg-[#13a0d3]/10 rounded-full flex items-center justify-center">
+                    <div className="w-3 h-3 bg-[#13a0d3] rounded-full"></div>
+                  </div>
+                  <h3 className="text-2xl font-semibold text-[#002961]">Des expertises variées</h3>
+                </div>
+                <p className="text-gray-600 leading-relaxed">
+                  Un accompagnement complet dans tous les domaines stratégiques de votre entreprise
+                </p>
+              </div>
+
+              <div>
+                <div className="flex items-center gap-3 mb-4">
+                  <div className="w-8 h-8 bg-[#13a0d3]/10 rounded-full flex items-center justify-center">
+                    <div className="w-3 h-3 bg-[#13a0d3] rounded-full"></div>
+                  </div>
+                  <h3 className="text-2xl font-semibold text-[#002961]">Un engagement d'excellence</h3>
+                </div>
+                <p className="text-gray-600 leading-relaxed">
+                  Une approche rigoureuse et personnalisée pour garantir votre réussite
+                </p>
+              </div>
+            </motion.div>
+          </div>
+        </motion.div>
+
+        <div className="border-t border-gray-200 pt-16">
+          <div className="max-w-6xl mx-auto mb-12">
+            <h3 className="text-2xl font-medium text-[#002961] text-center">
+              Activités de Conseil
+            </h3>
+          </div>
+          
+          {/* Infinite Marquee */}
+          <div className="relative overflow-hidden">
+            <motion.div 
+              className="flex gap-6"
+              animate={{ x: [0, -2400] }}
+              transition={{ 
+                duration: 40, 
+                repeat: Infinity, 
+                ease: "linear" 
+              }}
+            >
+              {/* First set of cards */}
               {activities.map((activity, index) => {
                 const IconComponent = activity.icon
                 return (
-                  <motion.div 
-                    key={index} 
-                    className="bg-gray-50 p-8 border border-gray-200 hover:border-[#13a0d3] hover:bg-white transition-all duration-300 group"
-                    initial={{ opacity: 0, y: 30 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.6, delay: index * 0.1 }}
-                    whileHover={{ y: -5, boxShadow: "0 10px 25px rgba(0, 0, 0, 0.1)" }}
-                    viewport={{ once: true }}
+                  <div 
+                    key={`first-${index}`} 
+                    className="flex-shrink-0 w-64 bg-white border border-gray-200 rounded-lg p-4 shadow-md hover:shadow-lg transition-all duration-300 group"
                   >
-                    <div className="flex items-start gap-4 hover:translate-x-1 transition-transform duration-200">
-                      <div className="w-12 h-12 bg-gray-200 group-hover:bg-[#13a0d3]/10 flex items-center justify-center flex-shrink-0 transition-colors duration-300">
-                        <IconComponent className="w-6 h-6 text-gray-600 group-hover:text-[#13a0d3] transition-colors duration-300" />
+                    <div className="flex items-center gap-3">
+                      <div className="w-10 h-10 bg-gradient-to-br from-[#13a0d3]/10 to-[#13a0d3]/5 rounded-lg flex items-center justify-center flex-shrink-0 group-hover:from-[#13a0d3]/20 group-hover:to-[#13a0d3]/10 transition-all duration-300">
+                        <IconComponent className="w-5 h-5 text-[#13a0d3]" />
                       </div>
-                      <div>
-                        <h4 className="font-medium text-[#002961] mb-2 group-hover:text-[#13a0d3] transition-colors duration-300">{activity.text}</h4>
+                      <div className="flex-1">
+                        <h4 className="font-medium text-[#002961] text-sm leading-tight group-hover:text-[#13a0d3] transition-colors duration-300">
+                          {activity.text}
+                        </h4>
                       </div>
                     </div>
-                  </motion.div>
+                  </div>
+                )
+              })}
+              
+              {/* Duplicate set for seamless loop */}
+              {activities.map((activity, index) => {
+                const IconComponent = activity.icon
+                return (
+                  <div 
+                    key={`second-${index}`} 
+                    className="flex-shrink-0 w-64 bg-white border border-gray-200 rounded-lg p-4 shadow-md hover:shadow-lg transition-all duration-300 group"
+                  >
+                    <div className="flex items-center gap-3">
+                      <div className="w-10 h-10 bg-gradient-to-br from-[#13a0d3]/10 to-[#13a0d3]/5 rounded-lg flex items-center justify-center flex-shrink-0 group-hover:from-[#13a0d3]/20 group-hover:to-[#13a0d3]/10 transition-all duration-300">
+                        <IconComponent className="w-5 h-5 text-[#13a0d3]" />
+                      </div>
+                      <div className="flex-1">
+                        <h4 className="font-medium text-[#002961] text-sm leading-tight group-hover:text-[#13a0d3] transition-colors duration-300">
+                          {activity.text}
+                        </h4>
+                      </div>
+                    </div>
+                  </div>
                 )
               })}
             </motion.div>
+            
+            {/* Gradient overlays for smooth edges */}
+            <div className="absolute top-0 left-0 w-32 h-full bg-gradient-to-r from-white to-transparent pointer-events-none z-10"></div>
+            <div className="absolute top-0 right-0 w-32 h-full bg-gradient-to-l from-white to-transparent pointer-events-none z-10"></div>
           </div>
         </div>
       </div>

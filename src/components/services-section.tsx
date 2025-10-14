@@ -6,7 +6,7 @@ import { Navigation, Pagination } from 'swiper/modules'
 const services = [
   {
     icon: FileText,
-    image: "/assets/background.webp",
+    image: "/assets/Refonte_de_process.jpeg",
     title: "Refonte de process",
     items: [
       "Revue détaillée de processus opérationnels clés",
@@ -16,7 +16,7 @@ const services = [
   },
   {
     icon: TrendingUp,
-    image: "/assets/chess.jpg",
+    image: "/assets/bsns_strtg.jpg",
     title: "Accompagnement stratégique",
     items: [
       "Aide au positionnement stratégique d'entreprises",
@@ -27,7 +27,7 @@ const services = [
   },
   {
     icon: DollarSign,
-    image: "/assets/bulb.webp",
+    image: "/assets/valoridation.jpg",
     title: "Valorisation d'entreprises",
     items: [
       "Accompagnement dans des audits d'acquisition ou de cession",
@@ -38,7 +38,7 @@ const services = [
   },
   {
     icon: Database,
-    image: "/assets/laptop.webp",
+    image: "/assets/finance_opt.jpg",
     title: "Structuration financière",
     items: [
       "Analyse des éléments constitutifs du BFR",
@@ -49,7 +49,7 @@ const services = [
   },
   {
     icon: FolderKanban,
-    image: "/assets/background.webp",
+    image: "/assets/porject_man.jpg",
     title: "Gestion de projets",
     items: [
       "Pilotage de projets complexes et transverses",
@@ -60,7 +60,7 @@ const services = [
   },
   {
     icon: GraduationCap,
-    image: "/assets/chess.jpg",
+    image: "/assets/corp_training.jpg",
     title: "Formations et études sectorielles",
     items: [
       "Préparation et animation de formations thématiques",
