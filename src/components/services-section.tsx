@@ -87,7 +87,7 @@ export function ServicesSection() {
             <h2 className="text-4xl md:text-5xl font-light text-[#002961]">Notre offre de valeur</h2>
           </motion.div>
 
-          {/* Swiper Slider */}
+          {/* Swiper Slider with External Navigation */}
           <motion.div
             className="relative"
             initial={{ opacity: 0 }}
@@ -95,6 +95,18 @@ export function ServicesSection() {
             transition={{ duration: 0.8, delay: 0.2 }}
             viewport={{ once: true }}
           >
+            {/* Enhanced Custom Navigation Buttons - Outside Container */}
+            <div className="swiper-button-prev-custom absolute -left-16 top-1/2 -translate-y-1/2 z-10 w-14 h-14 bg-white shadow-xl rounded-full flex items-center justify-center hover:bg-[#13a0d3] hover:text-white transition-all duration-300 cursor-pointer group border-2 border-gray-100 hover:border-[#13a0d3]">
+              <svg className="w-6 h-6 text-gray-700 group-hover:text-white transition-colors duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M15 19l-7-7 7-7" />
+              </svg>
+            </div>
+            <div className="swiper-button-next-custom absolute -right-16 top-1/2 -translate-y-1/2 z-10 w-14 h-14 bg-white shadow-xl rounded-full flex items-center justify-center hover:bg-[#13a0d3] hover:text-white transition-all duration-300 cursor-pointer group border-2 border-gray-100 hover:border-[#13a0d3]">
+              <svg className="w-6 h-6 text-gray-700 group-hover:text-white transition-colors duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M9 5l7 7-7 7" />
+              </svg>
+            </div>
+
             <Swiper
               modules={[Navigation, Pagination]}
               spaceBetween={32}
@@ -168,18 +180,6 @@ export function ServicesSection() {
                 )
               })}
             </Swiper>
-
-            {/* Enhanced Custom Navigation Buttons */}
-            <div className="swiper-button-prev-custom absolute left-0 top-1/2 -translate-y-1/2 z-10 w-14 h-14 bg-white shadow-xl rounded-full flex items-center justify-center hover:bg-[#13a0d3] hover:text-white transition-all duration-300 cursor-pointer group border-2 border-gray-100 hover:border-[#13a0d3]">
-              <svg className="w-6 h-6 text-gray-700 group-hover:text-white transition-colors duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M15 19l-7-7 7-7" />
-              </svg>
-            </div>
-            <div className="swiper-button-next-custom absolute right-0 top-1/2 -translate-y-1/2 z-10 w-14 h-14 bg-white shadow-xl rounded-full flex items-center justify-center hover:bg-[#13a0d3] hover:text-white transition-all duration-300 cursor-pointer group border-2 border-gray-100 hover:border-[#13a0d3]">
-              <svg className="w-6 h-6 text-gray-700 group-hover:text-white transition-colors duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M9 5l7 7-7 7" />
-              </svg>
-            </div>
 
             {/* Custom Pagination */}
             <div className="swiper-pagination-custom flex justify-center mt-8 gap-2"></div>
