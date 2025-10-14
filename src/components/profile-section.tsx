@@ -128,7 +128,7 @@ export function ProfileSection() {
                 <div className="relative">
                   <img 
                     src="/assets/hicham.png" 
-                    alt="Hicham Bensaid Alaoui - Fondateur & Gérant HBA Consulting" 
+                    alt="Hicham BENSAID ALAOUI - Fondateur & Gérant HBA Consulting" 
                     className="w-32 h-32 md:w-40 md:h-40 object-cover rounded-3xl shadow-2xl border-4 border-white"
                   />
                   <div className="absolute inset-0 rounded-3xl bg-gradient-to-tr from-[#13a0d3]/20 to-transparent"></div>
@@ -144,7 +144,7 @@ export function ProfileSection() {
                 viewport={{ once: true }}
               >
                 <p className="text-sm font-medium text-gray-500 mb-4 tracking-wide">Fondateur & Gérant</p>
-                <h2 className="text-4xl md:text-5xl font-light text-[#002961] mb-4">Hicham Bensaid Alaoui</h2>
+                <h2 className="text-4xl md:text-5xl font-light text-[#002961] mb-4">Hicham BENSAID ALAOUI</h2>
               </motion.div>
             </div>
           </motion.div>

@@ -16,12 +16,12 @@ const videos = [
   },
   {
     id: "VJROTAtXY9k",
-    title: "The News in Front with Hicham Bensaid Alaoui",
+    title: "The News in Front with Hicham BENSAID ALAOUI",
     url: "https://www.youtube.com/watch?v=VJROTAtXY9k"
   },
   {
     id: "7FvjmDKJDQc",
-    title: "L'Info en Face avec Hicham Bensaid Alaoui",
+    title: "L'Info en Face avec Hicham BENSAID ALAOUI",
     url: "https://www.youtube.com/watch?v=7FvjmDKJDQc"
   }
 ]
@@ -64,7 +64,7 @@ export default function InterventionsMediasPage() {
             <div className="mb-20">
               <h1 className="text-4xl md:text-5xl font-light text-[#002961] mb-16">Interventions médias</h1>
               <p className="text-xl text-gray-600 leading-relaxed max-w-3xl">
-                Découvrez les interventions de Hicham Bensaid Alaoui dans les médias, 
+                Découvrez les interventions de Hicham BENSAID ALAOUI dans les médias, 
                 où il partage son expertise sur les enjeux économiques et financiers.
               </p>
             </div>
