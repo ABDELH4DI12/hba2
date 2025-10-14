@@ -38,14 +38,14 @@ export function ExpertiseSection() {
                 <div className="text-7xl font-light text-[#002961] mb-6">1</div>
                 <h3 className="text-xl font-medium text-[#002961] mb-4">Des expertises variées</h3>
                 <p className="text-gray-600 leading-relaxed">
-                  Un accompagnement complet dans tous les domaines stratégiques de votre entreprise.
+                  Un accompagnement complet dans tous les domaines stratégiques de votre entreprise
                 </p>
               </div>
               <div>
                 <div className="text-7xl font-light text-[#002961] mb-6">2</div>
                 <h3 className="text-xl font-medium text-[#002961] mb-4">Un engagement d'excellence</h3>
                 <p className="text-gray-600 leading-relaxed">
-                  Une approche rigoureuse et personnalisée pour garantir votre réussite.
+                  Une approche rigoureuse et personnalisée pour garantir votre réussite
                 </p>
               </div>
             </div>
@@ -55,13 +55,15 @@ export function ExpertiseSection() {
             <h3 className="text-2xl font-medium text-[#002961] mb-12">Activités de Conseil</h3>
             <div className="grid md:grid-cols-2 gap-x-16 gap-y-8">
               {activities.map((activity, index) => {
-                const Icon = activity.icon
+                const IconComponent = activity.icon
                 return (
-                  <div key={index} className="flex items-start gap-4 group">
-                    <div className="w-10 h-10 rounded-full bg-[#13a0d3]/10 flex items-center justify-center flex-shrink-0 group-hover:bg-[#13a0d3] transition-colors">
-                      <Icon className="w-5 h-5 text-[#13a0d3] group-hover:text-white transition-colors" />
+                  <div key={index} className="flex items-start gap-4">
+                    <div className="w-12 h-12 rounded-full bg-[#13a0d3]/10 flex items-center justify-center flex-shrink-0">
+                      <IconComponent className="w-6 h-6 text-[#13a0d3]" />
                     </div>
-                    <span className="text-gray-700 leading-relaxed pt-2">{activity.text}</span>
+                    <div>
+                      <h4 className="font-medium text-[#002961] mb-2">{activity.text}</h4>
+                    </div>
                   </div>
                 )
               })}
