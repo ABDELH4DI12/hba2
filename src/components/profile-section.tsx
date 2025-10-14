@@ -8,8 +8,8 @@ const timelineData = [
     highlights: [
       "Conseil aux entreprises de toutes tailles et de tous secteurs",
       "Accompagnement au développement commercial des entreprises",
-      "Assistance au positionnement stratégique",
-      "Assistance à maîtrise d'ouvrage et gestion de projets",
+      "Assistance à positionnement stratégique",
+      "Assistance à Maîtrise d'Ouvrage et Gestion de projets",
       "Organisation d'évènements thématiques",
     ],
     active: true,
@@ -92,11 +92,11 @@ const achievements = [
     ],
   },
   {
-    category: "Autres activités",
+    category: "Autres Activités",
     icon: Award,
     items: [
       "Intervenant régulier à l'EMLyon Business School (campus de Casablanca)",
-      "Enseignement en Executive MBA et Programme Grande École",
+      "Enseignement en Executive MBA et Programme Grande Ecole",
       "Interventions médias régulières sur Radio Mars depuis 2015",
       "Fondateur de l'école de football KFA O'Darb à Dar Bouazza (2018)",
     ],
@@ -126,7 +126,6 @@ export function ProfileSection() {
               <div className="text-center md:text-left">
                 <p className="text-sm font-medium text-gray-500 mb-4 tracking-wide">Fondateur & Gérant</p>
                 <h2 className="text-4xl md:text-5xl font-light text-[#002961] mb-4">Hicham Bensaid Alaoui</h2>
-                <p className="text-lg text-gray-600">43 ans, marié, 2 enfants</p>
               </div>
             </div>
           </div>
@@ -164,8 +163,9 @@ export function ProfileSection() {
             </div>
           </div>
 
-          <div className="bg-white p-12 rounded-lg mb-16">
-            <h3 className="text-2xl font-medium text-[#002961] mb-12">Parcours professionnel</h3>
+          <div className="mb-16">
+            <h2 className="text-3xl md:text-4xl font-light text-[#002961] mb-12">Parcours professionnel</h2>
+            <div className="bg-white p-12 rounded-lg">
 
             <div className="space-y-12">
               {timelineData.map((item, index) => (
@@ -186,10 +186,12 @@ export function ProfileSection() {
                 </div>
               ))}
             </div>
+            </div>
           </div>
 
-          <div className="bg-white p-12 rounded-lg">
-            <h3 className="text-2xl font-medium text-[#002961] mb-12">Principales réalisations</h3>
+          <div className="mb-16">
+            <h2 className="text-3xl md:text-4xl font-light text-[#002961] mb-12">Principales Réalisations</h2>
+            <div className="bg-white p-12 rounded-lg">
 
             <div className="grid md:grid-cols-2 gap-12">
               {achievements.map((achievement, index) => (
@@ -204,6 +206,7 @@ export function ProfileSection() {
                   </ul>
                 </div>
               ))}
+            </div>
             </div>
           </div>
         </div>

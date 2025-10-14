@@ -33,7 +33,7 @@ export function ExpertiseSection() {
             Notre expertise
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-            Une expertise complète au service de votre croissance, avec des solutions sur-mesure adaptées à vos défis spécifiques.
+            Une expertise complète au service de votre croissance, avec des solutions sur mesure adaptées à vos défis spécifiques.
           </p>
         </div>
 
@@ -57,7 +57,7 @@ export function ExpertiseSection() {
 
           <div className="border-t border-gray-200 pt-16">
             <h3 className="text-2xl font-medium text-[#002961] mb-12">
-              Activités de conseil
+              Activités de Conseil
             </h3>
             <div className="grid md:grid-cols-2 gap-x-16 gap-y-8">
               {activities.map((activity, index) => {
