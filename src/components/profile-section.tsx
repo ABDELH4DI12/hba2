@@ -111,7 +111,7 @@ export function ProfileSection() {
           <div className="mb-20">
             <p className="text-sm font-medium text-gray-500 mb-4 tracking-wide">Fondateur & Gérant</p>
             <h2 className="text-4xl md:text-5xl font-light text-[#002961] mb-4">Hicham Bensaid Alaoui</h2>
-            <p className="text-lg text-gray-600">43 ans</p>
+            <p className="text-lg text-gray-600">43 ans, marié, 2 enfants</p>
           </div>
 
           <div className="grid md:grid-cols-3 gap-8 mb-24">
