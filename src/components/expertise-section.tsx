@@ -25,16 +25,23 @@ const activities = [
 
 export function ExpertiseSection() {
   return (
-    <section className="py-32 bg-gray-50">
+    <section className="py-32 bg-white">
       <div className="container mx-auto px-6 lg:px-12 max-w-7xl">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
-            Notre expertise
+        {/* Hero Section */}
+        <motion.div 
+          className="text-center mb-20"
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+          viewport={{ once: true }}
+        >
+          <h2 className="text-4xl md:text-5xl font-light text-[#002961] mb-6">
+            Nos Expertises
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-            Une expertise complète au service de votre croissance, avec des solutions sur mesure adaptées à vos défis spécifiques.
+            Des solutions expertes pour transformer vos défis en opportunités de croissance
           </p>
-        </div>
+        </motion.div>
 
         <div className="max-w-6xl mx-auto">
           <motion.div 
@@ -80,7 +87,7 @@ export function ExpertiseSection() {
                 return (
                   <motion.div 
                     key={index} 
-                    className="bg-white p-8 rounded-lg"
+                    className="bg-gray-50 p-8 border border-gray-200 hover:border-[#13a0d3] hover:bg-white transition-all duration-300 group"
                     initial={{ opacity: 0, y: 30 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.6, delay: index * 0.1 }}
@@ -88,11 +95,11 @@ export function ExpertiseSection() {
                     viewport={{ once: true }}
                   >
                     <div className="flex items-start gap-4 hover:translate-x-1 transition-transform duration-200">
-                      <div className="w-12 h-12 rounded-full bg-[#13a0d3]/10 flex items-center justify-center flex-shrink-0">
-                        <IconComponent className="w-6 h-6 text-[#13a0d3]" />
+                      <div className="w-12 h-12 bg-gray-200 group-hover:bg-[#13a0d3]/10 flex items-center justify-center flex-shrink-0 transition-colors duration-300">
+                        <IconComponent className="w-6 h-6 text-gray-600 group-hover:text-[#13a0d3] transition-colors duration-300" />
                       </div>
                       <div>
-                        <h4 className="font-medium text-[#002961] mb-2">{activity.text}</h4>
+                        <h4 className="font-medium text-[#002961] mb-2 group-hover:text-[#13a0d3] transition-colors duration-300">{activity.text}</h4>
                       </div>
                     </div>
                   </motion.div>

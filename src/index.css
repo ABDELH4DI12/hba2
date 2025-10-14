@@ -4,6 +4,68 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Swiper Styles */
+.services-swiper {
+  padding: 0 48px 48px 48px;
+  overflow: hidden;
+  position: relative;
+}
+
+.services-swiper .swiper-wrapper {
+  display: flex !important;
+  align-items: stretch !important;
+}
+
+.services-swiper .swiper-slide {
+  height: auto !important;
+  display: flex !important;
+  flex-shrink: 0 !important;
+}
+
+.services-swiper .swiper-button-prev-custom,
+.services-swiper .swiper-button-next-custom {
+  position: absolute !important;
+  top: 50% !important;
+  transform: translateY(-50%) !important;
+  z-index: 10 !important;
+  width: 48px !important;
+  height: 48px !important;
+  background: white !important;
+  border-radius: 50% !important;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15) !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  cursor: pointer !important;
+  transition: all 0.3s ease !important;
+}
+
+.services-swiper .swiper-button-prev-custom {
+  left: 0 !important;
+}
+
+.services-swiper .swiper-button-next-custom {
+  right: 0 !important;
+}
+
+.services-swiper .swiper-button-prev-custom:hover,
+.services-swiper .swiper-button-next-custom:hover {
+  background: #f9fafb !important;
+  transform: translateY(-50%) scale(1.05) !important;
+}
+
+.swiper-pagination-custom .swiper-pagination-bullet {
+  width: 12px !important;
+  height: 12px !important;
+  background: #d1d5db !important;
+  opacity: 1 !important;
+  transition: all 0.3s ease !important;
+}
+
+.swiper-pagination-custom .swiper-pagination-bullet-active {
+  background: #13a0d3 !important;
+}
+
 :root {
   --font-quicksand: 'Quicksand', sans-serif;
   --background: oklch(0.99 0.005 85);

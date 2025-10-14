@@ -206,57 +206,79 @@ export function ProfileSection() {
           </motion.div>
 
           <div className="mb-16">
-            <motion.h3 
-              className="text-3xl md:text-4xl font-light text-[#002961] mb-8"
+            <motion.div 
+              className="text-center mb-16"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
               viewport={{ once: true }}
             >
-              Parcours professionnel
-            </motion.h3>
-            <motion.div 
-              className="bg-white p-12 rounded-lg mb-16"
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.2 }}
-              viewport={{ once: true }}
-            >
-
-              <div className="relative">
-                {/* Continuous vertical line */}
-                <div className="absolute left-0 top-8 bottom-0 w-0.5 bg-gray-300"></div>
-                
-                <div className="space-y-12">
-                  {timelineData.map((item, index) => (
-                    <motion.div 
-                      key={index} 
-                      className="pl-16 relative"
-                      initial={{ opacity: 0, x: -20 }}
-                      whileInView={{ opacity: 1, x: 0 }}
-                      transition={{ duration: 0.6, delay: index * 0.1 }}
-                      viewport={{ once: true }}
-                    >
-                    <div
-                      className="absolute -left-8 top-0 w-16 h-16 rounded-full border-2 flex flex-col items-center justify-center text-xs font-medium bg-white text-gray-600 border-gray-300"
-                    >
-                      <div className="leading-tight">{item.startDate.year}</div>
-                      <div className="leading-tight">{item.startDate.dayMonth}</div>
-                    </div>
-                    <h4 className="text-xl font-medium text-[#002961] mb-1">{item.title}</h4>
-                    <p className="text-sm text-gray-600 mb-4">{item.company}</p>
-                    <ul className="space-y-2">
-                      {item.highlights.map((highlight, idx) => (
-                        <li key={idx} className="text-sm text-gray-600 leading-relaxed">
-                          • {highlight}
-                        </li>
-                      ))}
-                    </ul>
-                    </motion.div>
-                  ))}
-                </div>
-              </div>
+              <h3 className="text-3xl md:text-4xl font-light text-[#002961] mb-4">Mon Voyage Professionnel</h3>
+              <p className="text-lg text-gray-600 max-w-2xl mx-auto">Une aventure de plus de 18 ans à travers l'excellence, l'innovation et la transformation des entreprises</p>
             </motion.div>
+
+            {/* Journey Cards Layout */}
+            <div className="grid gap-8 md:gap-12">
+              {timelineData.map((item, index) => (
+                <motion.div 
+                  key={index}
+                  className={`relative ${index % 2 === 0 ? 'md:pr-12' : 'md:pl-12 md:ml-auto'} max-w-4xl`}
+                  initial={{ opacity: 0, y: 50 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.8, delay: index * 0.2 }}
+                  viewport={{ once: true }}
+                >
+                  {/* Journey Card */}
+                  <div className="relative bg-gradient-to-br from-gray-50 to-gray-100 border-l-4 border-gray-400 p-8 shadow-lg hover:shadow-xl transition-all duration-300 group">
+                    
+                    {/* Floating Date Badge */}
+                    <div className={`absolute -top-4 ${index % 2 === 0 ? 'right-8' : 'left-8'} px-4 py-2 rounded-full text-sm font-semibold text-white shadow-lg bg-gray-600`}>
+                      {item.startDate.year}
+                    </div>
+
+                    {/* Content */}
+                    <div className="space-y-4">
+                      <div>
+                        <h4 className="text-2xl font-bold text-[#002961] mb-2 group-hover:text-[#13a0d3] transition-colors duration-300">
+                          {item.title}
+                        </h4>
+                        <p className="text-lg font-medium text-gray-700 mb-4">{item.company}</p>
+                      </div>
+
+                      {/* Impact Highlights */}
+                      <div className="grid md:grid-cols-2 gap-3">
+                        {item.highlights.slice(0, 4).map((highlight, idx) => (
+                          <div key={idx} className="flex items-start gap-3 p-3 bg-white/70 backdrop-blur-sm">
+                            <div className="w-2 h-2 rounded-full mt-2 flex-shrink-0 bg-gray-500"></div>
+                            <span className="text-sm text-gray-700 leading-relaxed">{highlight}</span>
+                          </div>
+                        ))}
+                      </div>
+
+                      {/* Additional highlights if any */}
+                      {item.highlights.length > 4 && (
+                        <div className="pt-2 border-t border-white/50">
+                          {item.highlights.slice(4).map((highlight, idx) => (
+                            <div key={idx} className="flex items-start gap-3 py-2">
+                              <div className="w-1.5 h-1.5 rounded-full mt-2 flex-shrink-0 bg-gray-500"></div>
+                              <span className="text-sm text-gray-600 leading-relaxed">{highlight}</span>
+                            </div>
+                          ))}
+                        </div>
+                      )}
+                    </div>
+
+                    {/* Decorative Elements */}
+                    <div className={`absolute top-4 ${index % 2 === 0 ? 'left-4' : 'right-4'} w-12 h-12 rounded-full opacity-20 bg-gray-400`}></div>
+                  </div>
+
+                  {/* Connection Line to Next Item */}
+                  {index < timelineData.length - 1 && (
+                    <div className="hidden md:block absolute bottom-0 left-1/2 transform -translate-x-1/2 translate-y-6 w-0.5 h-6 bg-gradient-to-b from-gray-300 to-transparent"></div>
+                  )}
+                </motion.div>
+              ))}
+            </div>
           </div>
 
           <div className="mb-16">

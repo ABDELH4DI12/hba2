@@ -1,9 +1,12 @@
 import { FileText, TrendingUp, DollarSign, Database, FolderKanban, GraduationCap } from "lucide-react"
 import { motion } from "framer-motion"
+import { Swiper, SwiperSlide } from 'swiper/react'
+import { Navigation, Pagination } from 'swiper/modules'
 
 const services = [
   {
     icon: FileText,
+    image: "/assets/background.webp",
     title: "Refonte de process",
     items: [
       "Revue détaillée de processus opérationnels clés",
@@ -13,6 +16,7 @@ const services = [
   },
   {
     icon: TrendingUp,
+    image: "/assets/chess.jpg",
     title: "Accompagnement stratégique",
     items: [
       "Aide au positionnement stratégique d'entreprises",
@@ -23,6 +27,7 @@ const services = [
   },
   {
     icon: DollarSign,
+    image: "/assets/bulb.webp",
     title: "Valorisation d'entreprises",
     items: [
       "Accompagnement dans des audits d'acquisition ou de cession",
@@ -33,6 +38,7 @@ const services = [
   },
   {
     icon: Database,
+    image: "/assets/laptop.webp",
     title: "Structuration financière",
     items: [
       "Analyse des éléments constitutifs du BFR",
@@ -43,6 +49,7 @@ const services = [
   },
   {
     icon: FolderKanban,
+    image: "/assets/background.webp",
     title: "Gestion de projets",
     items: [
       "Pilotage de projets complexes et transverses",
@@ -53,6 +60,7 @@ const services = [
   },
   {
     icon: GraduationCap,
+    image: "/assets/chess.jpg",
     title: "Formations et études sectorielles",
     items: [
       "Préparation et animation de formations thématiques",
@@ -65,11 +73,11 @@ const services = [
 
 export function ServicesSection() {
   return (
-    <section id="services" className="py-32 bg-white">
+    <section id="services" className="py-16 bg-white">
       <div className="container mx-auto px-6 lg:px-12">
-        <div className="max-w-6xl mx-auto">
+        <div className="max-w-7xl mx-auto">
           <motion.div 
-            className="mb-20"
+            className="mb-12"
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
@@ -79,46 +87,105 @@ export function ServicesSection() {
             <h2 className="text-4xl md:text-5xl font-light text-[#002961]">Notre offre de valeur</h2>
           </motion.div>
 
-          <motion.div 
-            className="grid md:grid-cols-2 lg:grid-cols-3 gap-8"
+          {/* Swiper Slider */}
+          <motion.div
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             transition={{ duration: 0.8, delay: 0.2 }}
             viewport={{ once: true }}
           >
-            {services.map((service, index) => {
-              const Icon = service.icon
-              return (
-                <motion.div 
-                  key={index} 
-                  className="bg-gray-50 p-8 rounded-lg"
-                  initial={{ opacity: 0, y: 30 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: index * 0.1 }}
-                  whileHover={{ 
-                    y: -5, 
-                    backgroundColor: "#ffffff", 
-                    boxShadow: "0 10px 25px rgba(0, 0, 0, 0.1)" 
-                  }}
-                  viewport={{ once: true }}
-                >
-                  <div className="w-12 h-12 rounded-full bg-[#13a0d3]/10 flex items-center justify-center mb-6">
-                    <Icon className="w-6 h-6 text-[#13a0d3]" />
-                  </div>
-                  <h3 className="text-lg font-medium mb-4 text-[#002961]">{service.title}</h3>
-                  <ul className="space-y-2">
-                    {service.items.map((item, idx) => (
-                      <li key={idx} className="text-sm text-gray-600 leading-relaxed">
-                        • {item}
-                      </li>
-                    ))}
-                  </ul>
-                </motion.div>
-              )
-            })}
+            <Swiper
+              modules={[Navigation, Pagination]}
+              spaceBetween={32}
+              slidesPerView={3}
+              slidesPerGroup={1}
+              navigation={{
+                nextEl: '.swiper-button-next-custom',
+                prevEl: '.swiper-button-prev-custom',
+              }}
+              pagination={{
+                clickable: true,
+                el: '.swiper-pagination-custom',
+              }}
+              breakpoints={{
+                320: {
+                  slidesPerView: 1,
+                  spaceBetween: 20,
+                  slidesPerGroup: 1,
+                },
+                768: {
+                  slidesPerView: 2,
+                  spaceBetween: 24,
+                  slidesPerGroup: 1,
+                },
+                1024: {
+                  slidesPerView: 3,
+                  spaceBetween: 32,
+                  slidesPerGroup: 1,
+                },
+              }}
+              className="services-swiper"
+            >
+              {services.map((service, index) => {
+                const Icon = service.icon
+                return (
+                  <SwiperSlide key={index}>
+                    <motion.div 
+                      className="bg-white border border-gray-200 overflow-hidden hover:shadow-xl transition-all duration-300 h-full"
+                      initial={{ opacity: 0, y: 30 }}
+                      whileInView={{ opacity: 1, y: 0 }}
+                      transition={{ duration: 0.6, delay: index * 0.1 }}
+                      whileHover={{ y: -5 }}
+                      viewport={{ once: true }}
+                    >
+                      {/* Image Section */}
+                      <div className="relative h-48 overflow-hidden">
+                        <img 
+                          src={service.image} 
+                          alt={service.title}
+                          className="w-full h-full object-cover transition-transform duration-300 hover:scale-105"
+                        />
+                        <div className="absolute top-4 left-4 w-12 h-12 bg-white/90 backdrop-blur-sm rounded-full flex items-center justify-center">
+                          <Icon className="w-6 h-6 text-[#13a0d3]" />
+                        </div>
+                      </div>
+
+                      {/* Content Section */}
+                      <div className="p-6">
+                        <h3 className="text-xl font-medium mb-4 text-[#002961]">{service.title}</h3>
+                        <ul className="space-y-3">
+                          {service.items.map((item, idx) => (
+                            <li key={idx} className="flex items-start gap-3">
+                              <div className="w-2 h-2 bg-[#13a0d3] rounded-full mt-2 flex-shrink-0"></div>
+                              <span className="text-sm text-gray-600 leading-relaxed">{item}</span>
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
+                    </motion.div>
+                  </SwiperSlide>
+                )
+              })}
+            </Swiper>
+
+            {/* Custom Navigation Buttons */}
+            <div className="swiper-button-prev-custom absolute left-0 top-1/2 -translate-y-1/2 z-10 w-12 h-12 bg-white shadow-lg rounded-full flex items-center justify-center hover:bg-gray-50 transition-colors cursor-pointer">
+              <svg className="w-6 h-6 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
+              </svg>
+            </div>
+            <div className="swiper-button-next-custom absolute right-0 top-1/2 -translate-y-1/2 z-10 w-12 h-12 bg-white shadow-lg rounded-full flex items-center justify-center hover:bg-gray-50 transition-colors cursor-pointer">
+              <svg className="w-6 h-6 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+              </svg>
+            </div>
+
+            {/* Custom Pagination */}
+            <div className="swiper-pagination-custom flex justify-center mt-8 gap-2"></div>
           </motion.div>
         </div>
       </div>
+
     </section>
   )
 }
