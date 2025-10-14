@@ -28,16 +28,17 @@
   top: 50% !important;
   transform: translateY(-50%) !important;
   z-index: 10 !important;
-  width: 48px !important;
-  height: 48px !important;
+  width: 56px !important;
+  height: 56px !important;
   background: white !important;
   border-radius: 50% !important;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15) !important;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15) !important;
   display: flex !important;
   align-items: center !important;
   justify-content: center !important;
   cursor: pointer !important;
   transition: all 0.3s ease !important;
+  border: 2px solid #f3f4f6 !important;
 }
 
 .services-swiper .swiper-button-prev-custom {
@@ -50,20 +51,32 @@
 
 .services-swiper .swiper-button-prev-custom:hover,
 .services-swiper .swiper-button-next-custom:hover {
-  background: #f9fafb !important;
+  background: #13a0d3 !important;
+  border-color: #13a0d3 !important;
   transform: translateY(-50%) scale(1.05) !important;
+  box-shadow: 0 12px 30px rgba(19, 160, 211, 0.3) !important;
 }
 
 .swiper-pagination-custom .swiper-pagination-bullet {
-  width: 12px !important;
-  height: 12px !important;
+  width: 14px !important;
+  height: 14px !important;
   background: #d1d5db !important;
   opacity: 1 !important;
   transition: all 0.3s ease !important;
+  cursor: pointer !important;
+  border-radius: 50% !important;
+  margin: 0 4px !important;
+}
+
+.swiper-pagination-custom .swiper-pagination-bullet:hover {
+  background: #9ca3af !important;
+  transform: scale(1.1) !important;
 }
 
 .swiper-pagination-custom .swiper-pagination-bullet-active {
   background: #13a0d3 !important;
+  transform: scale(1.2) !important;
+  box-shadow: 0 2px 8px rgba(19, 160, 211, 0.4) !important;
 }
 
 :root {

@@ -89,6 +89,7 @@ export function ServicesSection() {
 
           {/* Swiper Slider */}
           <motion.div
+            className="relative"
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             transition={{ duration: 0.8, delay: 0.2 }}
@@ -129,7 +130,7 @@ export function ServicesSection() {
               {services.map((service, index) => {
                 const Icon = service.icon
                 return (
-                  <SwiperSlide key={index}>
+                  <SwiperSlide key={index} style={{position:'relative'}} >
                     <motion.div 
                       className="bg-white border border-gray-200 overflow-hidden hover:shadow-xl transition-all duration-300 h-full"
                       initial={{ opacity: 0, y: 30 }}
@@ -168,15 +169,15 @@ export function ServicesSection() {
               })}
             </Swiper>
 
-            {/* Custom Navigation Buttons */}
-            <div className="swiper-button-prev-custom absolute left-0 top-1/2 -translate-y-1/2 z-10 w-12 h-12 bg-white shadow-lg rounded-full flex items-center justify-center hover:bg-gray-50 transition-colors cursor-pointer">
-              <svg className="w-6 h-6 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
+            {/* Enhanced Custom Navigation Buttons */}
+            <div className="swiper-button-prev-custom absolute left-0 top-1/2 -translate-y-1/2 z-10 w-14 h-14 bg-white shadow-xl rounded-full flex items-center justify-center hover:bg-[#13a0d3] hover:text-white transition-all duration-300 cursor-pointer group border-2 border-gray-100 hover:border-[#13a0d3]">
+              <svg className="w-6 h-6 text-gray-700 group-hover:text-white transition-colors duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M15 19l-7-7 7-7" />
               </svg>
             </div>
-            <div className="swiper-button-next-custom absolute right-0 top-1/2 -translate-y-1/2 z-10 w-12 h-12 bg-white shadow-lg rounded-full flex items-center justify-center hover:bg-gray-50 transition-colors cursor-pointer">
-              <svg className="w-6 h-6 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+            <div className="swiper-button-next-custom absolute right-0 top-1/2 -translate-y-1/2 z-10 w-14 h-14 bg-white shadow-xl rounded-full flex items-center justify-center hover:bg-[#13a0d3] hover:text-white transition-all duration-300 cursor-pointer group border-2 border-gray-100 hover:border-[#13a0d3]">
+              <svg className="w-6 h-6 text-gray-700 group-hover:text-white transition-colors duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M9 5l7 7-7 7" />
               </svg>
             </div>
 
@@ -189,3 +190,4 @@ export function ServicesSection() {
     </section>
   )
 }
+
