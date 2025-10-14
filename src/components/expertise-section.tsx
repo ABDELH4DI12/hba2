@@ -26,38 +26,47 @@ const activities = [
 
 export function ExpertiseSection() {
   return (
-    <section id="expertise" className="py-32 bg-white">
-      <div className="container mx-auto px-6 lg:px-12">
-        <div className="max-w-6xl mx-auto">
-          <div className="mb-20">
-            <p className="text-sm font-medium text-gray-500 mb-8 tracking-wide">Nos enjeux principaux</p>
-            <h2 className="text-4xl md:text-5xl font-light text-[#002961] mb-16">Qui nous sommes</h2>
+    <section className="py-32 bg-gray-50">
+      <div className="container mx-auto px-6 lg:px-12 max-w-7xl">
+        <div className="text-center mb-16">
+          <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
+            Notre Expertise
+          </h2>
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
+            Une expertise complète au service de votre croissance, avec des solutions sur mesure adaptées à vos défis spécifiques.
+          </p>
+        </div>
 
-            <div className="grid md:grid-cols-2 gap-16 mb-20">
-              <div>
-                <div className="text-7xl font-light text-[#002961] mb-6">1</div>
-                <h3 className="text-xl font-medium text-[#002961] mb-4">Des expertises variées</h3>
-                <p className="text-gray-600 leading-relaxed">
-                  Un accompagnement complet dans tous les domaines stratégiques de votre entreprise
-                </p>
-              </div>
-              <div>
-                <div className="text-7xl font-light text-[#002961] mb-6">2</div>
-                <h3 className="text-xl font-medium text-[#002961] mb-4">Un engagement d'excellence</h3>
-                <p className="text-gray-600 leading-relaxed">
-                  Une approche rigoureuse et personnalisée pour garantir votre réussite
-                </p>
-              </div>
+        <div className="max-w-6xl mx-auto">
+          <div className="grid md:grid-cols-2 gap-16 mb-20">
+            <div>
+              <div className="text-7xl font-light text-[#002961] mb-6">1</div>
+              <h3 className="text-xl font-medium text-[#002961] mb-4">Des expertises variées</h3>
+              <p className="text-gray-600 leading-relaxed">
+                Un accompagnement complet dans tous les domaines stratégiques de votre entreprise
+              </p>
+            </div>
+            <div>
+              <div className="text-7xl font-light text-[#002961] mb-6">2</div>
+              <h3 className="text-xl font-medium text-[#002961] mb-4">Un engagement d'excellence</h3>
+              <p className="text-gray-600 leading-relaxed">
+                Une approche rigoureuse et personnalisée pour garantir votre réussite
+              </p>
             </div>
           </div>
 
           <div className="border-t border-gray-200 pt-16">
-            <h3 className="text-2xl font-medium text-[#002961] mb-12">Activités de Conseil</h3>
+            <h3 className="text-2xl font-medium text-[#002961] mb-12">
+              Activités de Conseil
+            </h3>
             <div className="grid md:grid-cols-2 gap-x-16 gap-y-8">
               {activities.map((activity, index) => {
                 const IconComponent = activity.icon
                 return (
-                  <div key={index} className="flex items-start gap-4">
+                  <div 
+                    key={index} 
+                    className="flex items-start gap-4 hover:translate-x-1 transition-transform duration-200"
+                  >
                     <div className="w-12 h-12 rounded-full bg-[#13a0d3]/10 flex items-center justify-center flex-shrink-0">
                       <IconComponent className="w-6 h-6 text-[#13a0d3]" />
                     </div>
