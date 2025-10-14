@@ -26,10 +26,15 @@ export function Header() {
       <div className="container mx-auto px-6 lg:px-12">
         <div className="flex items-center justify-between h-16">
           <Link to="/" className="group">
-            <div className="text-2xl font-bold tracking-tight">
-              <span className={`transition-colors ${isScrolled ? "text-[#002961]" : "text-white"}`}>HBA</span>
-              <span className="text-[#13a0d3]">.</span>
-            </div>
+            <img 
+              src="/assets/hbaLogo.png" 
+              alt="HBA Logo" 
+              className={`h-8 w-auto transition-all duration-300 ${
+                isScrolled 
+                  ? "brightness-0 saturate-100 hue-rotate-[210deg] brightness-[0.3] contrast-[2]" 
+                  : ""
+              }`}
+            />
           </Link>
 
           <nav className="hidden md:flex items-center gap-12">

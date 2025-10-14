@@ -5,10 +5,12 @@ export function Footer() {
     <footer className="bg-[#002961] text-white py-4">
       <div className="container mx-auto px-6 lg:px-12">
         <div className="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-center gap-4">
-          <div className="text-center md:text-left">
-            <div className="text-lg font-bold mb-1">
-              HBA<span className="text-[#13a0d3]">.</span>
-            </div>
+          <div className="text-center md:text-left flex flex-col items-center md:items-start">
+            <img 
+              src="/assets/hbaLogo.png" 
+              alt="HBA Logo" 
+              className="h-8 w-auto mb-2"
+            />
             <p className="text-xs text-white/60">© 2025 HBA Premium Consulting</p>
           </div>
 
