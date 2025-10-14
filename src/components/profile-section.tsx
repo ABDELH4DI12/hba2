@@ -4,6 +4,7 @@ import { motion } from "framer-motion"
 const timelineData = [
   {
     period: "Janvier 2025 - Présent",
+    startDate: { year: "2025", dayMonth: "Jan" },
     title: "Fondateur et Gérant",
     company: "HBA Consulting SARL AU",
     highlights: [
@@ -17,6 +18,7 @@ const timelineData = [
   },
   {
     period: "Septembre 2020 - Décembre 2024",
+    startDate: { year: "2020", dayMonth: "Sep" },
     title: "Directeur Général",
     company: "Allianz Trade Maroc et Tunisie",
     highlights: [
@@ -29,6 +31,7 @@ const timelineData = [
   },
   {
     period: "2019 - 2020",
+    startDate: { year: "2019", dayMonth: "Jan" },
     title: "Directeur du Crédit",
     company: "Allianz Trade Moyen-Orient",
     highlights: [
@@ -40,6 +43,7 @@ const timelineData = [
   },
   {
     period: "2013 - 2019",
+    startDate: { year: "2013", dayMonth: "Jan" },
     title: "Directeur du Crédit",
     company: "Allianz Trade Maroc et Tunisie",
     highlights: [
@@ -50,6 +54,7 @@ const timelineData = [
   },
   {
     period: "2005 - 2013",
+    startDate: { year: "2005", dayMonth: "Sep" },
     title: "Senior Manager",
     company: "Ernst & Young Maroc",
     highlights: [
@@ -218,22 +223,28 @@ export function ProfileSection() {
               viewport={{ once: true }}
             >
 
-              <div className="space-y-12">
-                {timelineData.map((item, index) => (
-                  <motion.div 
-                    key={index} 
-                    className="border-l-2 border-[#13a0d3] pl-8 relative"
-                    initial={{ opacity: 0, x: -20 }}
-                    whileInView={{ opacity: 1, x: 0 }}
-                    transition={{ duration: 0.6, delay: index * 0.1 }}
-                    viewport={{ once: true }}
-                  >
+              <div className="relative">
+                {/* Continuous vertical line */}
+                <div className="absolute left-0 top-8 bottom-0 w-0.5 bg-gray-300"></div>
+                
+                <div className="space-y-12">
+                  {timelineData.map((item, index) => (
+                    <motion.div 
+                      key={index} 
+                      className="pl-16 relative"
+                      initial={{ opacity: 0, x: -20 }}
+                      whileInView={{ opacity: 1, x: 0 }}
+                      transition={{ duration: 0.6, delay: index * 0.1 }}
+                      viewport={{ once: true }}
+                    >
                     <div
-                      className={`absolute -left-2 top-0 w-4 h-4 rounded-full ${item.active ? "bg-[#13a0d3]" : "bg-gray-300"}`}
-                    />
-                    <div className="text-sm text-gray-500 mb-2">{item.period}</div>
+                      className="absolute -left-8 top-0 w-16 h-16 rounded-full border-2 flex flex-col items-center justify-center text-xs font-medium bg-white text-gray-600 border-gray-300"
+                    >
+                      <div className="leading-tight">{item.startDate.year}</div>
+                      <div className="leading-tight">{item.startDate.dayMonth}</div>
+                    </div>
                     <h4 className="text-xl font-medium text-[#002961] mb-1">{item.title}</h4>
-                    <p className="text-gray-600 mb-4">{item.company}</p>
+                    <p className="text-sm text-gray-600 mb-4">{item.company}</p>
                     <ul className="space-y-2">
                       {item.highlights.map((highlight, idx) => (
                         <li key={idx} className="text-sm text-gray-600 leading-relaxed">
@@ -241,8 +252,9 @@ export function ProfileSection() {
                         </li>
                       ))}
                     </ul>
-                  </motion.div>
-                ))}
+                    </motion.div>
+                  ))}
+                </div>
               </div>
             </motion.div>
           </div>
