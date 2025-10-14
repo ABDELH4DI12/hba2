@@ -14,7 +14,7 @@ const values = [
 
 export function TrustSection() {
   return (
-    <section className="py-32 bg-white">
+    <section id="contrat-confiance" className="py-32 bg-white">
       <div className="container mx-auto px-6 lg:px-12">
         <div className="max-w-6xl mx-auto">
           <div className="mb-20">

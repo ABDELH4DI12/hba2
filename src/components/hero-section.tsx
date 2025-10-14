@@ -3,41 +3,89 @@ import { ArrowRight } from "lucide-react"
 
 export function HeroSection() {
   return (
-    <section className="relative h-[75vh] flex items-center justify-center overflow-hidden bg-[#002961]">
+    <section 
+      className="relative h-screen flex items-center justify-center overflow-hidden bg-gray-100"
+      style={{
+        backgroundImage: 'url(/assets/background.webp)',
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+        backgroundRepeat: 'no-repeat'
+      }}
+    >
+      {/* Light dark overlay */}
+      <div className="absolute inset-0 bg-black/20"></div>
+      
       <div className="container mx-auto px-6 lg:px-12 relative z-10">
-        <div className="max-w-3xl mx-auto text-center">
-          <h1 className="text-4xl md:text-6xl font-light mb-6 text-white leading-tight">HBA Premium Consulting</h1>
+        <div className="grid lg:grid-cols-2 gap-12 items-center min-h-[80vh]">
+          {/* Left Content */}
+          <div className="text-left">
+            {/* Decorative line with text */}
+            <div className="flex items-center mb-4">
+              <div className="w-16 h-px bg-[#13a0d3] mr-4"></div>
+              <div className="text-sm font-medium text-white tracking-wide uppercase">
+                Solutions de Conseil de Confiance
+              </div>
+            </div>
+            
+            <h1 className="text-4xl md:text-6xl font-light mb-6 text-white leading-tight">
+              Nous redonnons vie à vos entreprises
+            </h1>
+            
+            <p className="text-lg md:text-xl text-white/90 mb-10 font-light leading-relaxed max-w-xl">
+              Votre partenaire de confiance en conseil d'entreprise expert. Où la qualité rencontre la précision, et vos projets trouvent une seconde vie !
+            </p>
 
-          <p className="text-lg md:text-xl text-white/90 mb-10 max-w-2xl mx-auto font-light leading-relaxed">
-            Cabinet de conseil au service des entreprises, avec des expertises variées et un engagement d'excellence
-          </p>
+            {/* Navigation Links - Solid styling */}
+            <div className="grid grid-cols-2 gap-2 mb-8 max-w-md">
+              <a
+                href="#qui-nous-sommes"
+                className="group inline-flex items-center justify-center px-3 py-2 bg-white text-[#002961] rounded-md font-medium hover:bg-[#13a0d3] hover:text-white transition-all duration-300 text-xs border border-gray-200 shadow-sm"
+              >
+                Qui nous sommes
+              </a>
+              <a
+                href="#contrat-confiance"
+                className="group inline-flex items-center justify-center px-3 py-2 bg-white text-[#002961] rounded-md font-medium hover:bg-[#13a0d3] hover:text-white transition-all duration-300 text-xs border border-gray-200 shadow-sm"
+              >
+                Notre contrat
+              </a>
+              <a
+                href="#approche"
+                className="group inline-flex items-center justify-center px-3 py-2 bg-white text-[#002961] rounded-md font-medium hover:bg-[#13a0d3] hover:text-white transition-all duration-300 text-xs border border-gray-200 shadow-sm"
+              >
+                Notre approche
+              </a>
+              <a
+                href="#services"
+                className="group inline-flex items-center justify-center px-3 py-2 bg-white text-[#002961] rounded-md font-medium hover:bg-[#13a0d3] hover:text-white transition-all duration-300 text-xs border border-gray-200 shadow-sm"
+              >
+                Offre de valeur
+              </a>
+            </div>
 
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-            <Link
-              to="/contact"
-              className="group inline-flex items-center gap-2 px-8 py-4 bg-white text-[#002961] rounded-full font-medium hover:bg-[#13a0d3] hover:text-white transition-all duration-300 w-full sm:w-auto justify-center"
-            >
-              Contactez-nous
-              <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-            </Link>
-            <Link
-              to="/interventions-medias"
-              className="group inline-flex items-center gap-2 px-8 py-4 bg-transparent border-2 border-white text-white rounded-full font-medium hover:bg-white hover:text-[#002961] transition-all duration-300 w-full sm:w-auto justify-center"
-            >
-              Interventions Médias
-              <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-            </Link>
+            {/* Main CTA Button */}
+            <div className="flex flex-col sm:flex-row gap-4">
+              <Link
+                to="/contact"
+                className="group inline-flex items-center gap-2 px-8 py-4 bg-[#13a0d3] text-white rounded-lg font-medium hover:bg-white hover:text-[#002961] transition-all duration-300 border-2 border-[#13a0d3] hover:border-white"
+              >
+                <span>Réserver une Consultation</span>
+                <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+              </Link>
+            </div>
+          </div>
+
+          {/* Right Image */}
+          <div className="flex justify-center lg:justify-end">
+            <div className="relative">
+              <img 
+                src="/assets/bulb.webp" 
+                alt="Bulb representing business solutions" 
+                className="max-w-full h-auto max-h-[600px] object-contain"
+              />
+            </div>
           </div>
         </div>
-      </div>
-
-      <div className="absolute bottom-0 left-0 w-full">
-        <svg viewBox="0 0 1440 120" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-full h-auto">
-          <path
-            d="M0 0L60 10C120 20 240 40 360 46.7C480 53 600 47 720 43.3C840 40 960 40 1080 46.7C1200 53 1320 67 1380 73.3L1440 80V120H1380C1320 120 1200 120 1080 120C960 120 840 120 720 120C600 120 480 120 360 120C240 120 120 120 60 120H0V0Z"
-            fill="white"
-          />
-        </svg>
       </div>
     </section>
   )
