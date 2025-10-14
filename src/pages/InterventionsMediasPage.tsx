@@ -1,5 +1,6 @@
 import { Header } from "../components/header"
 import { Footer } from "../components/footer"
+import { Breadcrumb } from "../components/breadcrumb"
 import { Play } from "lucide-react"
 
 const videos = [
@@ -53,9 +54,11 @@ function VideoCard({ video }: { video: typeof videos[0] }) {
 
 export default function InterventionsMediasPage() {
   return (
-    <main className="min-h-screen">
+    <div className="min-h-screen">
       <Header />
-      <section className="pt-24 pb-32 bg-gray-50">
+      <Breadcrumb />
+      <main id="main-content">
+        <section className="pt-8 pb-32 bg-gray-50">
         <div className="container mx-auto px-6 lg:px-12">
           <div className="max-w-6xl mx-auto">
             <div className="mb-20">
@@ -86,8 +89,9 @@ export default function InterventionsMediasPage() {
             )}
           </div>
         </div>
-      </section>
+        </section>
+      </main>
       <Footer />
-    </main>
+    </div>
   )
 }

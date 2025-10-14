@@ -1,15 +1,17 @@
 import { Header } from "../components/header"
 import { ContactSection } from "../components/contact-section"
 import { Footer } from "../components/footer"
+import { Breadcrumb } from "../components/breadcrumb"
 
 export default function ContactPage() {
   return (
-    <main className="min-h-screen">
+    <div className="min-h-screen">
       <Header />
-      <div className="pt-20">
+      <Breadcrumb />
+      <main id="main-content" className="pt-4">
         <ContactSection />
-      </div>
+      </main>
       <Footer />
-    </main>
+    </div>
   )
 }

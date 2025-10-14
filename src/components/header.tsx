@@ -3,26 +3,34 @@ import { Link, useLocation } from "react-router-dom"
 import { Menu, X } from "lucide-react"
 
 export function Header() {
-  const [isMenuOpen, setIsMenuOpen] = useState(false)
   const [isScrolled, setIsScrolled] = useState(false)
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
   const location = useLocation()
   const pathname = location.pathname
 
   useEffect(() => {
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 20)
+      setIsScrolled(window.scrollY > 50)
     }
-    window.addEventListener("scroll", handleScroll)
-    handleScroll() // Check initial scroll position
-    return () => window.removeEventListener("scroll", handleScroll)
+    window.addEventListener('scroll', handleScroll)
+    return () => window.removeEventListener('scroll', handleScroll)
   }, [])
 
   return (
-    <header
-      className={`fixed top-0 left-0 right-0 z-[100] transition-all duration-500 ${
-        isScrolled ? "bg-white/90 backdrop-blur-lg shadow-md border-b border-gray-200/50" : "bg-[#002961]/95 backdrop-blur-sm"
-      }`}
-    >
+    <>
+      {/* Skip Navigation Link for Accessibility */}
+      <a 
+        href="#main-content" 
+        className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-[#13a0d3] text-white px-4 py-2 rounded z-50"
+      >
+        Aller au contenu principal
+      </a>
+      
+      <header 
+        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+          isScrolled ? 'bg-white/95 backdrop-blur-md shadow-lg' : 'bg-transparent'
+        }`}
+      >
       <div className="container mx-auto px-6 lg:px-12">
         <div className="flex items-center justify-between h-16">
           <Link to="/" className="group">
@@ -77,8 +85,8 @@ export function Header() {
           </nav>
 
           {/* Mobile Menu Button */}
-          <button onClick={() => setIsMenuOpen(!isMenuOpen)} className="md:hidden p-2">
-            {isMenuOpen ? (
+          <button onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)} className="md:hidden p-2">
+            {isMobileMenuOpen ? (
               <X className={`w-6 h-6 ${isScrolled ? "text-gray-900" : "text-white"}`} />
             ) : (
               <Menu className={`w-6 h-6 ${isScrolled ? "text-gray-900" : "text-white"}`} />
@@ -87,26 +95,26 @@ export function Header() {
         </div>
 
         {/* Mobile Navigation */}
-        {isMenuOpen && (
+        {isMobileMenuOpen && (
           <nav className="md:hidden py-6 border-t border-gray-200">
             <div className="flex flex-col gap-4">
               <Link
                 to="/"
-                onClick={() => setIsMenuOpen(false)}
+                onClick={() => setIsMobileMenuOpen(false)}
                 className={`text-sm font-medium ${pathname === "/" ? "text-[#13a0d3]" : "text-gray-900"}`}
               >
                 Présentation
               </Link>
               <Link
                 to="/interventions-medias"
-                onClick={() => setIsMenuOpen(false)}
+                onClick={() => setIsMobileMenuOpen(false)}
                 className={`text-sm font-medium ${pathname === "/interventions-medias" ? "text-[#13a0d3]" : "text-gray-900"}`}
               >
                 Interventions Médias
               </Link>
               <Link
                 to="/contact"
-                onClick={() => setIsMenuOpen(false)}
+                onClick={() => setIsMobileMenuOpen(false)}
                 className="px-6 py-2.5 bg-[#13a0d3] text-white text-sm font-medium rounded-full text-center"
               >
                 Contact
@@ -116,5 +124,6 @@ export function Header() {
         )}
       </div>
     </header>
+    </>
   )
 }

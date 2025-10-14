@@ -1,7 +1,7 @@
 
 export function HeroSection() {
   return (
-    <section 
+    <main 
       className="relative h-screen flex items-center justify-center overflow-hidden bg-gray-100"
       style={{
         backgroundImage: 'url(/assets/chess.jpg)',
@@ -9,6 +9,8 @@ export function HeroSection() {
         backgroundPosition: 'center',
         backgroundRepeat: 'no-repeat'
       }}
+      role="banner"
+      aria-label="HBA Consulting - Solutions de conseil stratégique"
     >
       {/* Enhanced overlay with gradient */}
       <div className="absolute inset-0 bg-gradient-to-br from-black/70 via-black/60 to-black/50"></div>
@@ -31,13 +33,10 @@ export function HeroSection() {
               <div className="w-20 h-px bg-gradient-to-r from-transparent via-[#13a0d3] to-transparent"></div>
             </div>
 
-            <h1 className="text-4xl md:text-6xl lg:text-7xl xl:text-8xl font-bold mb-6 text-white leading-tight">
+            <h1 className="text-4xl md:text-6xl lg:text-7xl xl:text-8xl font-bold mb-12 text-white leading-tight">
               <span className="inline-block transform hover:scale-105 transition-transform duration-300">Smart</span>{" "}
               <span className="inline-block transform hover:scale-105 transition-transform duration-300">Solutions</span>{" "}
-              <span className="inline-block transform hover:scale-105 transition-transform duration-300">for</span>
-            </h1>
-            
-            <h1 className="text-4xl md:text-6xl lg:text-7xl xl:text-8xl font-bold mb-12 text-white leading-tight">
+              <span className="inline-block transform hover:scale-105 transition-transform duration-300">for</span>{" "}
               <span className="inline-block transform hover:scale-105 transition-transform duration-300">Business</span>{" "}
               <span className="inline-block transform hover:scale-105 transition-transform duration-300">and</span>{" "}
               <span className="inline-block text-transparent bg-clip-text bg-gradient-to-r from-[#13a0d3] to-[#0891b2] transform hover:scale-105 transition-transform duration-300">
@@ -93,6 +92,6 @@ export function HeroSection() {
         </div>
       </div>
 
-    </section>
+    </main>
   )
 }
