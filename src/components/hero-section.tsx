@@ -53,40 +53,6 @@ export function HeroSection() {
               <div className="absolute -bottom-2 left-1/2 transform -translate-x-1/2 w-24 h-0.5 bg-gradient-to-r from-transparent via-[#13a0d3] to-transparent"></div>
             </div>
 
-            {/* Navigation Links - Horizontal Flex Layout */}
-            <div className="flex flex-wrap justify-center gap-4 max-w-5xl mx-auto">
-              <a
-                href="#qui-nous-sommes"
-                className="group relative inline-flex items-center justify-center px-6 py-3 bg-white/10 backdrop-blur-md text-white rounded-full font-medium hover:bg-[#13a0d3] hover:scale-110 transition-all duration-300 text-sm border border-white/30 shadow-lg hover:shadow-xl overflow-hidden"
-              >
-                <span className="relative z-10">Qui nous sommes</span>
-                <div className="absolute inset-0 bg-gradient-to-r from-[#13a0d3]/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-full"></div>
-              </a>
-              
-              <a
-                href="#contrat-confiance"
-                className="group relative inline-flex items-center justify-center px-6 py-3 bg-white/10 backdrop-blur-md text-white rounded-full font-medium hover:bg-[#13a0d3] hover:scale-110 transition-all duration-300 text-sm border border-white/30 shadow-lg hover:shadow-xl overflow-hidden"
-              >
-                <span className="relative z-10">Notre contrat</span>
-                <div className="absolute inset-0 bg-gradient-to-r from-[#13a0d3]/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-full"></div>
-              </a>
-              
-              <a
-                href="#approche"
-                className="group relative inline-flex items-center justify-center px-6 py-3 bg-white/10 backdrop-blur-md text-white rounded-full font-medium hover:bg-[#13a0d3] hover:scale-110 transition-all duration-300 text-sm border border-white/30 shadow-lg hover:shadow-xl overflow-hidden"
-              >
-                <span className="relative z-10">Notre approche</span>
-                <div className="absolute inset-0 bg-gradient-to-r from-[#13a0d3]/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-full"></div>
-              </a>
-              
-              <a
-                href="#services"
-                className="group relative inline-flex items-center justify-center px-6 py-3 bg-white/10 backdrop-blur-md text-white rounded-full font-medium hover:bg-[#13a0d3] hover:scale-110 transition-all duration-300 text-sm border border-white/30 shadow-lg hover:shadow-xl overflow-hidden"
-              >
-                <span className="relative z-10">Offre de valeur</span>
-                <div className="absolute inset-0 bg-gradient-to-r from-[#13a0d3]/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-full"></div>
-              </a>
-            </div>
 
           </div>
         </div>
