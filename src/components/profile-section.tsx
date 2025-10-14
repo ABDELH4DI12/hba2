@@ -1,4 +1,4 @@
-import { Award, GraduationCap, TrendingUp } from "lucide-react"
+import { GraduationCap, TrendingUp } from "lucide-react"
 import { motion } from "framer-motion"
 
 export function ProfileSection() {
@@ -137,7 +137,7 @@ export function ProfileSection() {
               viewport={{ once: true }}
             >
               <motion.a
-                href="#contact"
+                href="/contact"
                 className="inline-flex items-center gap-3 px-8 py-4 bg-gradient-to-r from-[#13a0d3] to-[#0891b2] text-white rounded-full font-medium text-lg shadow-xl hover:shadow-2xl transition-all duration-300"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
@@ -189,19 +189,6 @@ export function ProfileSection() {
                 <p className="text-xs text-gray-600">Stratégique</p>
               </motion.div>
 
-              <motion.div 
-                className="absolute -bottom-10 -left-10 bg-gradient-to-r from-[#13a0d3] to-[#0891b2] text-white p-6 rounded-2xl shadow-xl"
-                initial={{ opacity: 0, y: -20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: 0.9 }}
-                viewport={{ once: true }}
-                whileHover={{ y: -5 }}
-                style={{zIndex:'999'}}
-              >
-                <Award className="w-8 h-8 mb-2" />
-                <p className="text-sm font-semibold">Excellence</p>
-                <p className="text-xs opacity-90">Reconnue</p>
-              </motion.div>
 
               <motion.div 
                 className="absolute top-1/2 -right-5 bg-white p-4 rounded-full shadow-lg"

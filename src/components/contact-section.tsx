@@ -3,7 +3,7 @@ import { useState } from "react"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
-import { Mail, Phone, MapPin } from "lucide-react"
+import { Mail, MapPin } from "lucide-react"
 import { motion } from "framer-motion"
 
 export function ContactSection() {
@@ -85,21 +85,6 @@ ${formData.name}
                 </div>
               </motion.div>
 
-              <motion.div 
-                className="flex items-center gap-4"
-                initial={{ opacity: 0, x: -20 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.5, delay: 0.5 }}
-                viewport={{ once: true }}
-              >
-                <div className="w-12 h-12 rounded-full bg-[#13a0d3]/10 flex items-center justify-center">
-                  <Phone className="w-6 h-6 text-[#13a0d3]" />
-                </div>
-                <div>
-                  <p className="font-medium text-[#002961]">Téléphone</p>
-                  <p className="text-gray-600">+212 6 61 63 19 75</p>
-                </div>
-              </motion.div>
 
               <motion.div 
                 className="flex items-center gap-4"
