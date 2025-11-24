@@ -23,6 +23,11 @@ const videos = [
     id: "7FvjmDKJDQc",
     title: "L'Info en Face avec Hicham BENSAID ALAOUI",
     url: "https://www.youtube.com/watch?v=7FvjmDKJDQc"
+  },
+  {
+    id: "YruhWbB0EoU",
+    title: "Le Débrief : L’essentiel de l’actualité de la semaine",
+    url: "https://www.youtube.com/watch?v=YruhWbB0EoU"
   }
 ]
 
