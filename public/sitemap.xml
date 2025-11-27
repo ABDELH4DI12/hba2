@@ -1,20 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>http://hbaconseil.com/</loc>
-    <lastmod>2025-01-14</lastmod>
+    <loc>https://hbaconseil.com/</loc>
+    <lastmod>2025-11-27</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>http://hbaconseil.com/contact</loc>
-    <lastmod>2025-01-14</lastmod>
+    <loc>https://hbaconseil.com/contact</loc>
+    <lastmod>2025-11-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>http://hbaconseil.com/interventions-medias</loc>
-    <lastmod>2025-01-14</lastmod>
+    <loc>https://hbaconseil.com/interventions-medias</loc>
+    <lastmod>2025-11-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
