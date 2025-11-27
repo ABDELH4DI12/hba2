@@ -6,17 +6,17 @@ export function ProfileSection() {
     <section id="qui-nous-sommes" className="min-h-screen relative bg-gradient-to-br from-gray-50 via-white to-gray-50 overflow-hidden">
       {/* Animated Background Elements */}
       <div className="absolute inset-0 overflow-hidden">
-        <motion.div 
+        <motion.div
           className="absolute top-20 left-10 w-72 h-72 bg-[#13a0d3]/2 rounded-full blur-3xl"
-          animate={{ 
+          animate={{
             x: [0, 30, 0],
             y: [0, -20, 0],
           }}
           transition={{ duration: 20, repeat: Infinity, ease: "easeInOut" }}
         />
-        <motion.div 
+        <motion.div
           className="absolute bottom-20 right-10 w-96 h-96 bg-[#002961]/2 rounded-full blur-3xl"
-          animate={{ 
+          animate={{
             x: [0, -30, 0],
             y: [0, 20, 0],
           }}
@@ -26,9 +26,9 @@ export function ProfileSection() {
 
       <div className="container mx-auto px-6 lg:px-12 min-h-screen flex items-center relative z-10">
         <div className="grid lg:grid-cols-2 gap-16 items-center max-w-7xl mx-auto">
-          
+
           {/* Left Side - Content */}
-          <motion.div 
+          <motion.div
             className="space-y-8"
             initial={{ opacity: 0, x: -50 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -50,21 +50,21 @@ export function ProfileSection() {
               </h1>
             </motion.div>
 
-            <motion.p 
+            <motion.p
               className="text-xl text-gray-700 leading-relaxed"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.3 }}
               viewport={{ once: true }}
             >
-              Avec plus de <span className="font-semibold text-[#002961]">18 ans d'excellence</span> en conseil stratégique, 
-              j'accompagne les entreprises dans leur transformation et leur croissance à travers une approche 
-              unique alliant <span className="text-[#13a0d3] font-semibold">expertise financière</span> et 
+              Avec plus de <span className="font-semibold text-[#002961]">18 ans d'excellence</span> en conseil stratégique,
+              j'accompagne les entreprises dans leur transformation et leur croissance à travers une approche
+              unique alliant <span className="text-[#13a0d3] font-semibold">expertise financière</span> et
               <span className="text-[#13a0d3] font-semibold"> vision stratégique</span>.
             </motion.p>
 
             {/* Key Stats */}
-            <motion.div 
+            <motion.div
               className="grid grid-cols-3 gap-6 py-8"
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -72,7 +72,7 @@ export function ProfileSection() {
               viewport={{ once: true }}
             >
               <div className="text-center">
-                <motion.div 
+                <motion.div
                   className="text-4xl font-bold text-[#13a0d3] mb-2"
                   initial={{ scale: 0 }}
                   whileInView={{ scale: 1 }}
@@ -84,7 +84,7 @@ export function ProfileSection() {
                 <p className="text-sm text-gray-600">Années d'expertise</p>
               </div>
               <div className="text-center">
-                <motion.div 
+                <motion.div
                   className="text-4xl font-bold text-[#13a0d3] mb-2"
                   initial={{ scale: 0 }}
                   whileInView={{ scale: 1 }}
@@ -96,7 +96,7 @@ export function ProfileSection() {
                 <p className="text-sm text-gray-600">Projets réalisés</p>
               </div>
               <div className="text-center">
-                <motion.div 
+                <motion.div
                   className="text-4xl font-bold text-[#13a0d3] mb-2"
                   initial={{ scale: 0 }}
                   whileInView={{ scale: 1 }}
@@ -110,7 +110,7 @@ export function ProfileSection() {
             </motion.div>
 
             {/* Expertise Pills */}
-            <motion.div 
+            <motion.div
               className="flex flex-wrap gap-3"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -118,7 +118,7 @@ export function ProfileSection() {
               viewport={{ once: true }}
             >
               {["ESSEC Business School", "Université Paris Dauphine", "EMLyon", "Radio Mars"].map((item, index) => (
-                <motion.span 
+                <motion.span
                   key={index}
                   className="px-4 py-2 bg-white border border-gray-200 rounded-full text-sm text-gray-700 shadow-sm"
                   whileHover={{ scale: 1.05, backgroundColor: "#13a0d3", color: "white", borderColor: "#13a0d3" }}
@@ -151,7 +151,7 @@ export function ProfileSection() {
           </motion.div>
 
           {/* Right Side - Visual Element */}
-          <motion.div 
+          <motion.div
             className="relative"
             initial={{ opacity: 0, x: 50 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -160,23 +160,23 @@ export function ProfileSection() {
           >
             <div className="relative">
               {/* Main Image Container */}
-              <motion.div 
+              <motion.div
                 className="relative z-10"
                 whileHover={{ scale: 1.02 }}
                 transition={{ duration: 0.3 }}
               >
                 <div className="relative rounded-3xl overflow-hidden shadow-2xl">
-                  <img 
-                    src="/assets/hicham.png" 
-                    alt="Hicham BENSAID ALAOUI" 
-                    className="w-full h-[600px] object-cover"
+                  <img
+                    src="/assets/hicham.png"
+                    alt="Hicham BENSAID ALAOUI"
+                    className="w-full h-auto aspect-[3/4] object-cover md:h-[500px] lg:h-[600px] md:aspect-auto"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-[#002961]/30 via-transparent to-transparent"></div>
                 </div>
               </motion.div>
 
               {/* Floating Cards */}
-              <motion.div 
+              <motion.div
                 className="absolute -top-10 -right-10 bg-white p-6 rounded-2xl shadow-xl"
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -190,12 +190,12 @@ export function ProfileSection() {
               </motion.div>
 
 
-              <motion.div 
+              <motion.div
                 className="absolute top-1/2 -right-5 bg-white p-4 rounded-full shadow-lg"
                 initial={{ opacity: 0, scale: 0, rotate: 0 }}
                 whileInView={{ opacity: 1, scale: 1 }}
                 animate={{ rotate: 360 }}
-                transition={{ 
+                transition={{
                   opacity: { duration: 0.6, delay: 1 },
                   scale: { duration: 0.6, delay: 1 },
                   rotate: { duration: 20, repeat: Infinity, ease: "linear" }
